@@ -156,11 +156,11 @@
 }
 
 /*Toggle*/
-.container__87bf1.checked__87bf1{
-  background-color: var(--accent) !important;
+.container__87bf1.checked__87bf1 {
+  background-color: #FF0000 !important; /* roșu */
 }
-.container__87bf1.checked__87bf1:hover{
-  background-color: var(--accent-hovered) !important;
+.container__87bf1.checked__87bf1:hover {
+  background-color: #CC0000 !important; /* roșu mai închis la hover */
 }
 
 /*Special Flyout*/
