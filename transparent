@@ -4,8 +4,8 @@
   --dark-layer1: 255,255,255;
   --dark-flyout: rgba(30,30,30);
   --dark-select: 255,255,255;
-  --dark-accent: rgb(88,101,242); /* Albastru Discord normal */
-  --dark-accent-hovered: rgb(71,82,196); /* Hover mai închis */
+  --dark-accent: rgb(88,101,242); /* 🔵 Discord blue */
+  --dark-accent-hovered: rgb(71,82,196); /* hover blue */
   --dark-accent-font-color: white;
   --dark-button: rgb(45,45,45);
   --dark-button-border: rgb(60, 60, 60);
@@ -19,8 +19,8 @@
   --light-layer1: 255,255,255;
   --light-flyout: rgb(255, 255, 255);
   --light-select: 0,0,0;
-  --light-accent: rgb(0, 120, 212);
-  --light-accent-hovered: rgb(0, 94, 167);
+  --light-accent: rgb(88,101,242); /* 🔵 Discord blue */
+  --light-accent-hovered: rgb(71,82,196);
   --light-accent-font-color: white;
   --light-button: rgb(251,251,251);
   --light-button-border: rgb(204, 204, 231);
@@ -34,10 +34,9 @@
   --title-bar-icon: flex;
 }
 
+/* Dark Theme */
 .theme-dark { 
   --app-bg: var(--dark-bg);
-  
-  /*Layer 1*/
   --background-primary: rgba(var(--dark-layer1),0.05);
   --background-surface-high: rgba(var(--dark-layer1),0.05);
   --background-base-low: rgba(var(--dark-layer1),0.05);
@@ -48,17 +47,13 @@
   --channeltextarea-background: rgba(var(--dark-layer1),0.05);
   --bg-mod-subtle: rgba(var(--dark-layer1),0.1);
 
-  /*Flyout*/
   --background-floating: var(--dark-flyout); 
-
-  /*Select or hover*/
   --layer1: var(--dark-layer1);
   --flyout: var(--dark-flyout);
   --background-modifier-selected: rgba(var(--dark-select),0.07);
   --background-modifier-active: rgba(var(--dark-select),0.07);
   --background-modifier-hover: rgba(var(--dark-select),0.05);
 
-  /*variables*/
   --accent: var(--dark-accent);
   --accent-hovered: var(--dark-accent-hovered);
   --accent-font: var(--dark-accent-font-color);
@@ -69,32 +64,28 @@
   --background-accent: var(--dark-background-accent);
   --status-panel: var(--dark-status-panel);
 } 
-.theme-light {
-  --app-bg: var(--light-bg); 
 
-  /* Layer 1 */
+/* Light Theme */
+.theme-light {
+  --app-bg: var(--light-bg);
   --background-primary: rgba(var(--light-layer1),0.7);
-  --background-surface-high: rgba(var(--light-layer1), 0.7);
+  --background-surface-high: rgba(var(--light-layer1),0.7);
   --background-base-low: rgba(var(--light-layer1),0.7);
-  --background-surface-higher: rgba(var(--light-layer1), 0.4);
-  --background-secondary-alt: rgba(var(--light-layer1), 0.1);
-  --input-background: rgba(var(--light-layer1), 0.7); 
-  --background-secondary: rgba(var(--light-layer1), 0.7);
-  --background-tertiary: rgba(var(--light-layer1), 0.7);
-  --channeltextarea-background: rgba(var(--light-layer1), 0.4);
+  --background-surface-higher: rgba(var(--light-layer1),0.4);
+  --background-secondary-alt: rgba(var(--light-layer1),0.1);
+  --input-background: rgba(var(--light-layer1),0.7);
+  --background-secondary: rgba(var(--light-layer1),0.7);
+  --background-tertiary: rgba(var(--light-layer1),0.7);
+  --channeltextarea-background: rgba(var(--light-layer1),0.4);
   --bg-mod-subtle: rgba(0,0,0,0.1);
 
-  /* Flyout */
   --background-floating: var(--light-flyout);
-
-  /* Select or hover */
   --layer1: var(--light-layer1);
   --flyout: var(--light-flyout);
-  --background-modifier-selected: rgba(var(--light-select), 0.07);
-  --background-modifier-active: rgba(var(--light-select), 0.07);
-  --background-modifier-hover: rgba(var(--light-select), 0.05);
+  --background-modifier-selected: rgba(var(--light-select),0.07);
+  --background-modifier-active: rgba(var(--light-select),0.07);
+  --background-modifier-hover: rgba(var(--light-select),0.05);
 
-  /* Variables */
   --accent: var(--light-accent);
   --accent-hovered: var(--light-accent-hovered);
   --accent-font: var(--light-accent-font-color);
@@ -106,24 +97,23 @@
   --status-panel: var(--light-status-panel);
 }
 
-/*Server*/
-.visual-refresh .channelTextArea_f75fb0 {
-  background-color: var(--channeltextarea-background);
-}
-
-/* Toggle fix */
-.container__87bf1.checked__87bf1 {
+/* 🔵 Toggle switch fix */
+.container__87bf1.checked__87bf1,
+.container_cebd1c.checked_cebd1c {
   background-color: var(--accent) !important;
 }
-.container__87bf1.checked__87bf1:hover {
+.container__87bf1.checked__87bf1:hover,
+.container_cebd1c.checked_cebd1c:hover {
   background-color: var(--accent-hovered) !important;
 }
 
-/* Slider fix */
-.sliderContainer_c7a159 .barFill_c7a159 {
+/* 🔵 Slider fix */
+.sliderBar_c7a159 .barFill_c7a159,
+.sliderBar_c7a159 .barFill_bd5e1f {
   background-color: var(--accent) !important;
 }
-.slider_c7a159 .grabber_c7a159 {
+.slider_c7a159 .grabber_c7a159,
+.slider_c7a159 .grabber_bd5e1f {
   background-color: #fff !important;
   border: 2px solid var(--accent) !important;
 }
