@@ -4,9 +4,9 @@
   --dark-layer1: 255,255,255;
   --dark-flyout: rgba(30,30,30);
   --dark-select: 255,255,255;
-  --dark-accent: rgb(76, 194, 255);
-  --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
-  --dark-accent-font-color: black;
+  --dark-accent: rgb(88,101,242); /* albastru Discord normal */
+  --dark-accent-hovered: rgb(71,82,196); /* varianta mai închisă la hover */
+  --dark-accent-font-color: white;
   --dark-button: rgb(45,45,45);
   --dark-button-border: rgb(60, 60, 60);
   --dark-button-font-color: white;
