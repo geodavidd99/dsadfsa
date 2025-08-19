@@ -1,11 +1,17 @@
+/**
+ * @name Glass.theme
+ * @description Transparent theme + toggle/slider fix albastru ca Discord normal
+ * @author Unknown
+ */
+
 :root {
   /*Dark mode*/
   --dark-bg: transparent;
   --dark-layer1: 255,255,255;
   --dark-flyout: rgba(30,30,30);
   --dark-select: 255,255,255;
-  --dark-accent: rgb(88, 101, 242); /* 🔵 Discord blue */
-  --dark-accent-hovered: rgb(71, 82, 196); 
+  --dark-accent: rgb(76, 194, 255);
+  --dark-accent-hovered: rgb(65, 163, 214);
   --dark-accent-font-color: black;
   --dark-button: rgb(45,45,45);
   --dark-button-border: rgb(60, 60, 60);
@@ -36,9 +42,9 @@
 
 .theme-dark { 
   --app-bg: var(--dark-bg);
-  --background-primary: rgba(var(--dark-layer1),0.05); 
+  --background-primary: rgba(var(--dark-layer1),0.05);
   --background-surface-high: rgba(var(--dark-layer1),0.05);
-  --background-base-low: rgba(var(--dark-layer1),0.05); 
+  --background-base-low: rgba(var(--dark-layer1),0.05);
   --background-secondary-alt: rgba(var(--dark-layer1),0.05);
   --input-background: rgba(var(--dark-layer1),0.05);
   --background-secondary: rgba(var(--dark-layer1),0.05);
@@ -61,12 +67,11 @@
   --background-accent: var(--dark-background-accent);
   --status-panel: var(--dark-status-panel);
 } 
-
 .theme-light{
   --app-bg: var(--light-bg); 
-  --background-primary: rgba(var(--light-layer1),0.7); 
+  --background-primary: rgba(var(--light-layer1),0.7);
   --background-surface-high: rgba(var(--light-layer1), 0.7);
-  --background-base-low: rgba(var(--light-layer1),0.7); 
+  --background-base-low: rgba(var(--light-layer1),0.7);
   --background-surface-higher: rgba(var(--light-layer1), 0.4);
   --background-secondary-alt: rgba(var(--light-layer1), 0.1);
   --input-background: rgba(var(--light-layer1), 0.7); 
@@ -91,32 +96,80 @@
   --status-panel: var(--light-status-panel);
 }
 
-/* Toggle (all menus, including Theme Settings) */
-.container__87bf1.checked__87bf1,
-.container_cebd1c.checked_cebd1c,
-.container__8717f.checked__8717f {
-  background-color: var(--accent) !important;
-}
-.container__87bf1.checked__87bf1:hover,
-.container_cebd1c.checked_cebd1c:hover,
-.container__8717f.checked__8717f:hover {
-  background-color: var(--accent-hovered) !important;
+.app__160d8,
+.bg__960e4,
+.appMount__51fd7,
+.wrapper_ef3116,
+.visual-refresh .chat_f75fb0,
+.chatContent_f75fb0,
+.scroller__99e7c, .privateChannels__35e86,
+.themed__9293f, .nowPlayingColumn__133bf,
+.visual-refresh .tabBody__133bf, 
+.container__7d20c,
+.container__133bf,
+#app-mount .container__2637a, .sidebar_c48ade,
+.visual-refresh .clickable_f37cb1, .visual-refresh .hasBanner_f37cb1 .header_f37cb1,
+:where(.visual-refresh) .themedBackground__74017,
+.visual-refresh .container_f369db,
+.panels_c48ade, .container__37e49,
+.visual-refresh .sidebar_c48ade:after,
+.scroller__23746, .container__551b0, .theme-light .gradient_e9ef78, .backdrop__8a7fc,
+.visual-refresh .contentRegionScroller__23e6b, .visual-refresh .sidebarRegionScroller__23e6b, .visual-refresh .standardSidebarView__23e6b, .contentRegion__23e6b, .layer__960e4, 
+.fieldList__1fed1,
+.children__9293f:after,
+.visual-refresh .wrapper_d852db, .visual-refresh .wrapper_fc8177,
+.visual-refresh .content__908e2 {
+  background-color: transparent !important;
+  background: transparent !important;
 }
 
-/* Slider (volume, sensitivity, input/output) */
-.barFill__581d0, 
-.mq-slider-bar, 
-.mq-slider-progress, 
-.defaultValue__95e49,
-.barFill__0f88c, 
-.barFill__2e1c3, 
-.grabber__2e1c3 {
-  background-color: var(--accent) !important;
+.visual-refresh .channelTextArea_f75fb0 {
+  background-color: var(--channeltextarea-background);
 }
-.grabber__2e1c3, 
-.grabber__0f88c {
-  border: 2px solid var(--accent) !important;
+
+/* 🎛️ FIX: Toggle albastru */
+[role="switch"][aria-checked="true"] {
+  background-color: #5865F2 !important;
+}
+[role="switch"][aria-checked="true"]:hover {
+  background-color: #4752C4 !important;
+}
+
+/* 🎚️ FIX: Slider albastru */
+[class*="barFill"], 
+[class*="sliderBar"] > [class*="barFill"], 
+[class*="grabber"] {
+  background-color: #5865F2 !important;
+}
+[class*="grabber"] {
+  border: 2px solid #5865F2 !important;
   background: white !important;
 }
 
-/* Restul rămâne la fel (transparențe, background, etc.) */
+/*Flyout*/
+.messagesPopoutWrap__45690,
+.container__2692d,
+.container_fc561d,
+.contentWrapper__08434,
+.header_fed6d3,
+.wrapper__4e6ce,
+.popout__3f413,
+.wrapper_c0e32c,
+.quickswitcher_ac6cb0,
+.vc-notification-root,
+.container_cc2dff, .reactors_cc2dff,
+.emojiRow_e7d73e .emojiAliasInput_e7d73e .emojiInput_e7d73e,
+.main__949ab,
+.streamPreview__6da2d {
+  background-color: var(--flyout);
+}
+
+/*Misc fixuri */
+.overlayBackground_c69a7b { background-color: var(--dm-about); }
+.resizeHandle__01ae2 { width: 0px; }
+.container__0f2e8 {
+  background-color: rgba(var(--dark-layer1),0.05);
+  outline: solid 1px rgba(255,255,255,0.1);
+}
+body{ background-color: var(--app-bg) !important; }
+.app_a3002d { color: transparent; }
