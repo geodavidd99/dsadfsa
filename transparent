@@ -4,8 +4,8 @@
   --dark-layer1: 255,255,255;
   --dark-flyout: rgba(30,30,30);
   --dark-select: 255,255,255;
-  --dark-accent: rgb(76, 194, 255);
-  --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
+  --dark-accent: #414249;
+  --dark-accent-hovered: #414249; /*also disabled button*/
   --dark-accent-font-color: black;
   --dark-button: rgb(45,45,45);
   --dark-button-border: rgb(60, 60, 60);
@@ -19,8 +19,8 @@
   --light-layer1: 255,255,255;
   --light-flyout: rgb(255, 255, 255);
   --light-select: 0,0,0;
-  --light-accent: rgb(0, 120, 212);
-  --light-accent-hovered: rgb(0, 94, 167); /*also disabled button*/
+  --light-accent: #414249;
+  --light-accent-hovered: #414249; /*also disabled button*/
   --light-accent-font-color: white;
   --light-button: rgb(251,251,251);
   --light-button-border: rgb(204, 204, 231);
@@ -68,7 +68,6 @@
   --background-accent: var(--dark-background-accent);
   --status-panel: var(--dark-status-panel);
 } 
-
 .theme-light{
   --app-bg: var(--light-bg); 
 
@@ -254,36 +253,4 @@ body{
 /* Fix semicolon bug */
 .app_a3002d {
   color: transparent;
-}
-
-/* Modify slider colors to Discord default */
-input[type="range"] {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 8px;
-  background: var(--accent); /* Discord blue accent color */
-  border-radius: 4px;
-  outline: none;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background: var(--accent); /* Set thumb color to Discord blue */
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type="range"]::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  background: var(--accent); /* Set thumb color to Discord blue */
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type="range"]:focus {
-  background: var(--accent-hovered); /* Darker shade on focus */
 }
