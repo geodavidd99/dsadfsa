@@ -154,12 +154,13 @@
 }
 
 /*Toggle*/
-.container__87bf1.checked__87bf1{
-  background-color: var(--accent) !important;
+.container__87bf1.checked__87bf1 {
+  background-color: #5865f2 !important; /* Albastru Discord */
 }
-.container__87bf1.checked__87bf1:hover{
-  background-color: var(--accent-hovered) !important;
+.container__87bf1.checked__87bf1:hover {
+  background-color: #4752c4 !important; /* Albastru hover mai închis */
 }
+
 
 /*Special Flyout*/
 .messagesPopoutWrap__45690,
