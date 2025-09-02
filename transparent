@@ -4,8 +4,8 @@
   --dark-layer1: 255,255,255;
   --dark-flyout: rgba(30,30,30);
   --dark-select: 255,255,255;
-  --dark-accent: rgb(76, 194, 255);
-  --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
+  --dark-accent: #414249;
+  --dark-accent-hovered: #414249; /*also disabled button*/
   --dark-accent-font-color: black;
   --dark-button: rgb(45,45,45);
   --dark-button-border: rgb(60, 60, 60);
@@ -19,8 +19,8 @@
   --light-layer1: 255,255,255;
   --light-flyout: rgb(255, 255, 255);
   --light-select: 0,0,0;
-  --light-accent: rgb(0, 120, 212);
-  --light-accent-hovered: rgb(0, 94, 167); /*also disabled button*/
+  --light-accent: #414249;
+  --light-accent-hovered: #414249; /*also disabled button*/
   --light-accent-font-color: white;
   --light-button: rgb(251,251,251);
   --light-button-border: rgb(204, 204, 231);
@@ -39,7 +39,6 @@
   
   /*Layer 1*/
   --background-primary: rgba(var(--dark-layer1),0.05); /* Activity Card Empty */
-  --background-surface-high: rgba(var(--dark-layer1),0.05); /* Activity Card */
   --background-base-low: rgba(var(--dark-layer1),0.05); /* Follow channel */
   --background-secondary-alt: rgba(var(--dark-layer1),0.05);
   --input-background: rgba(var(--dark-layer1),0.05);
@@ -74,7 +73,6 @@
 
   /* Layer 1 */
   --background-primary: rgba(var(--light-layer1),0.7); /* Activity Card Empty */
-  --background-surface-high: rgba(var(--light-layer1), 0.7); /* Activity Card */
   --background-base-low: rgba(var(--light-layer1),0.7); /* Follow channel */
   --background-surface-higher: rgba(var(--light-layer1), 0.4);
   --background-secondary-alt: rgba(var(--light-layer1), 0.1);
@@ -235,10 +233,12 @@
 .overlay__8a7fc { /* Discovery header fix */
   top: 0px;
 }
+.outer_bf1984 { /* Activity Card */
+  background-color: var(--background-primary); 
+}
 
 /*meow*/
 :root {
-  --background-primary: transparent;
   --custom-channel-members-bg: transparent;
   --bg-base-primary: transparent;
   --home-background: transparent;
