@@ -4,8 +4,8 @@
   --dark-layer1: 255,255,255;
   --dark-flyout: rgba(30,30,30);
   --dark-select: 255,255,255;
-  --dark-accent: rgb(76, 194, 255);
-  --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
+  --dark-accent: transparent;
+  --dark-accent-hovered: transparent; /*also disabled button*/
   --dark-accent-font-color: black;
   --dark-button: rgb(45,45,45);
   --dark-button-border: rgb(60, 60, 60);
@@ -19,8 +19,8 @@
   --light-layer1: 255,255,255;
   --light-flyout: rgb(255, 255, 255);
   --light-select: 0,0,0;
-  --light-accent: rgb(0, 120, 212);
-  --light-accent-hovered: rgb(0, 94, 167); /*also disabled button*/
+  --light-accent: transparent;
+  --light-accent-hovered: transparent; /*also disabled button*/
   --light-accent-font-color: white;
   --light-button: rgb(251,251,251);
   --light-button-border: rgb(204, 204, 231);
