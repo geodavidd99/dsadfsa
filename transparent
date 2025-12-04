@@ -159,26 +159,55 @@
   outline: solid var(--button-border) 1.5px;
 }
 
-/* Toggle OFF */
+/* Toggle-uri generale */
 .container__3f21e {
-    background-color: rgba(0, 0, 0, 0.8) !important; /* negru când e OFF */
+    background-color: rgba(0, 0, 0, 0.8) !important; /* OFF = negru */
     transition: none !important;
 }
 
-/* Toggle ON */
 .container__3f21e.checked__3f21e {
-    background-color: rgba(219, 1, 11, 0.8) !important; /* roșu când e ON */
+    background-color: rgba(219, 1, 11, 0.8) !important; /* ON = roșu */
 }
 
-/* Hover pe ON */
 .container__3f21e.checked__3f21e:hover {
-    background-color: rgba(180, 0, 0, 0.8) !important; /* roșu mai închis la hover */
+    background-color: rgba(180, 0, 0, 0.8) !important; /* Hover = roșu mai închis */
 }
 
-/* Resetează pseudo-elementele */
 .container__3f21e::before,
 .container__3f21e::after {
     background: transparent !important;
+}
+
+/* Checkbox-uri Themes (Setări) */
+.themeSettings .checkbox-2jXyX0 {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* OFF = negru */
+    border: 1px solid rgba(180,0,0,0.8) !important;
+    transition: none !important;
+}
+
+.themeSettings .checkbox-2jXyX0.checked-1fX7Ys {
+    background-color: rgba(219, 1, 11, 0.8) !important; /* ON = roșu */
+}
+
+.themeSettings .checkbox-2jXyX0.checked-1fX7Ys:hover {
+    background-color: rgba(180, 0, 0, 0.8) !important; /* Hover = roșu mai închis */
+}
+
+/* Checkmark pseudo-element */
+.themeSettings .checkbox-2jXyX0::after {
+    background-color: white !important; /* checkmark alb */
+}
+
+/* Optional: toate butoanele lookFilled roșii */
+.lookFilled__201d5.colorBrand__201d5,
+.lookFilled__201d5.colorBrand__201d5:hover,
+.lookFilled__201d5.colorBrand__201d5:disabled {
+    background-color: rgba(219, 1, 11, 0.8) !important; /* roșu */
+    color: white !important;
+}
+
+.lookFilled__201d5.colorBrand__201d5:hover {
+    background-color: rgba(180, 0, 0, 0.8) !important;
 }
 
 
@@ -284,19 +313,4 @@ body{
 }
 
 
-
-/* Checkbox Themes */
-.themeSettings .checkbox-2jXyX0 {
-    background-color: rgba(0, 0, 0, 0.8) !important; /* OFF = negru */
-    border: 1px solid rgba(180,0,0,0.8) !important;
-}
-
-.themeSettings .checkbox-2jXyX0.checked-1fX7Ys {
-    background-color: rgba(219, 1, 11, 0.8) !important; /* ON = roșu */
-}
-
-/* Checkmark pseudo-element */
-.themeSettings .checkbox-2jXyX0::after {
-    background-color: white !important; /* checkmark alb */
-}
 
