@@ -159,24 +159,14 @@
   outline: solid var(--button-border) 1.5px;
 }
 
-/* Toggle complet: negru când OFF, roșu când ON, fără flash albastru */
-.container__3f21e {
-    background-color: rgba(0, 0, 0, 0.8) !important; /* negru când e OFF */
-    transition: none !important;                     /* elimină animația default */
-}
-
-.container__3f21e.checked__3f21e {
-    background-color: rgba(219, 1, 11, 0.8) !important; /* roșu când e ON */
-}
-
-.container__3f21e.checked__3f21e:hover {
-    background-color: rgba(180, 0, 0, 0.8) !important; /* roșu mai închis la hover */
-}
-
+.container__3f21e,
+.container__3f21e.checked__3f21e,
 .container__3f21e::before,
 .container__3f21e::after {
-    background: transparent !important; /* elimină pseudo-elemente default */
+    background-color: rgba(219, 1, 11, 0.8) !important;
+    transition: none !important;
 }
+
 
 
 
