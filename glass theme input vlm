@@ -195,7 +195,7 @@ border: none;
 
 /* CheckBox */
 .container__87bf1.checked__87bf1{
-    background-color: rgba(255, 255, 255, 0.24) !important;
+    background-color: rgba(219, 1, 11, 0.8) !important;
 }
 
 /* Profile card */
