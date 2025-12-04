@@ -254,10 +254,11 @@ border: none;
 /* MESSAGEBOX */
 
 /* НАЖАТЫЕ КНОПКИ */
-:where(.visual-refresh) .checkbox_f525d3.checked_f525d3{
-    background: radial-gradient(90.42% 100% at 50% 100%, rgba(226, 135, 135, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(31, 17, 119, 0.5) 0, rgba(130, 110, 238, 0.5) 100%) !important;
+:where(.visual-refresh) .checkbox_f525d3.checked_f525d3 {
+    background: rgba(219, 1, 11, 0.8) !important;
     border: none;
 }
+
 /* НАЖАТЫЕ КНОПКИ */
 
 /* ПРОГРЕСС БАР ЗВУК  */
