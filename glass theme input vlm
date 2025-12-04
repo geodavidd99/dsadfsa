@@ -261,11 +261,13 @@ border: none;
 /* НАЖАТЫЕ КНОПКИ */
 
 /* ПРОГРЕСС БАР ЗВУК  */
-.barFill_a562c8{
-    background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
-		radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);;
+.barFill_a562c8 {
+    background: radial-gradient(ellipse farthest-corner at right bottom, rgba(219, 1, 11, 1) 0%, rgba(219, 1, 11, 0.8) 80%, transparent 100%),
+                radial-gradient(ellipse farthest-corner at left top, rgba(219, 1, 11, 0.6) 0%, rgba(219, 1, 11, 0.4) 50%, transparent 100%);
     border: none;
     background-color: transparent !important;
+}
+
 }
 /* ПРОГРЕСС БАР ЗВУК  */
 
