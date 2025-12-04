@@ -140,29 +140,30 @@
 }
 
 /*Buttons*/
-.lookFilled__201d5.colorBrand__201d5 {
-  background-color: var(--accent);
-  color: var(--accent-font);
-}
-.lookFilled__201d5.colorBrand__201d5:hover {
-  background-color: var(--accent-hovered);
-}
-.lookFilled__201d5.colorBrand__201d5:disabled{
-  background-color: var(--accent-hovered);
-}
-.lookFilled__201d5.colorPrimary__201d5, .lookFilled__201d5.colorPrimary__201d5:disabled {
-  background-color: var(--button);
-  color: var(--button-font-color);
-  outline: solid var(--button-border) 1.5px;
+/* Make all buttons transparent */
+.lookFilled__201d5.colorBrand__201d5,
+.lookFilled__201d5.colorPrimary__201d5,
+.container__3f21e.checked__3f21e,
+.lottieIcon__5eb9b.buttonIcon_e131a9, /* soundboard/video buttons */
+.activityButton__XXXXXX, /* start an activity buttons, înlocuiește XXXXXX cu clasa reală dacă ai */
+.settingsButton__XXXXXX /* settings buttons */ {
+  background-color: transparent !important;
+  border: none !important; /* optional, dacă vrei să dispară și border-ul */
+  outline: none !important;
 }
 
-/*Toggle*/
-.container__3f21e.checked__3f21e{
-  background-color: var(--accent) !important;
+/* Hover and disabled states */
+.lookFilled__201d5.colorBrand__201d5:hover,
+.lookFilled__201d5.colorBrand__201d5:disabled,
+.lookFilled__201d5.colorPrimary__201d5:hover,
+.lookFilled__201d5.colorPrimary__201d5:disabled,
+.container__3f21e.checked__3f21e:hover,
+.lottieIcon__5eb9b.buttonIcon_e131a9:hover,
+.activityButton__XXXXXX:hover,
+.settingsButton__XXXXXX:hover {
+  background-color: transparent !important;
 }
-.container__3f21e.checked__3f21e:hover{
-  background-color: var(--accent-hovered) !important;
-}
+
 
 /*Special Flyout*/
 .messagesPopoutWrap_e8b59c,
