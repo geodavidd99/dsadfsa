@@ -273,6 +273,13 @@ border: none;
 }
 /* ПРОГРЕСС БАР ЗВУК  */
 
+/* БАР ТЕСТА МИКРОФОНА (СДЕЛАН ПРОЗРАЧНЫМ) */
+/* Этот класс обычно используется для фона ползунка/теста чувствительности микрофона */
+.inputMini__269d7 { 
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
 .border__2f4f7.speaking__2f4f7{
    box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.2) inset;
 }
