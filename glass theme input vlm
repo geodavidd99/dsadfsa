@@ -273,9 +273,11 @@ border: none;
 }
 /* ПРОГРЕСС БАР ЗВУК  */
 
-/* БАР ТЕСТА МИКРОФОНА (СДЕЛАН ПРОЗРАЧНЫМ) */
-/* ⚠️ Новый селектор, который должен сработать ⚠️ */
-.inputMini__269d7, .inputDefault__269d7 { 
+/* БАРЫ ТЕСТА МИКРОФОНА И ГРОМКОСТИ (СДЕЛАНЫ ПРОЗРАЧНЫМИ) */
+/* Селекторы для фона ползунка чувствительности микрофона: */
+.inputMini__269d7, .inputDefault__269d7,
+/* Селектор для фона ползунка громкости: */
+.sliderOverride_a562c8 { 
     background-color: transparent !important;
     box-shadow: none !important;
     border: none !important;
