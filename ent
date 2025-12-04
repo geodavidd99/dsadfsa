@@ -90,10 +90,26 @@ button,
 button.lookFilled__201d5,
 .lookFilled__201d5.colorBrand__201d5,
 .lookFilled__201d5.colorPrimary__201d5,
-.container__3f21e.checked__3f21e {
+.container__3f21e {
   background-color: transparent !important;
   border: none !important;
   color: inherit !important;
+}
+
+/* Toggle din setări: check/uncheck */
+.container__3f21e {
+  background-color: transparent !important;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.container__3f21e:hover {
+  background-color: rgba(76, 194, 255, 0.2) !important;
+}
+.container__3f21e.checked__3f21e {
+  background-color: rgb(76, 194, 255) !important;
+  border: none !important;
+}
+.container__3f21e.checked__3f21e:hover {
+  background-color: rgb(65, 163, 214) !important;
 }
 
 /* General transparent backgrounds */
@@ -117,4 +133,14 @@ button.lookFilled__201d5,
 /* Body */
 body{
   background-color: var(--app-bg) !important;
+}
+
+/* Titlebar */
+.title_c38106, .leading_c38106, .trailing_c38106, .winButtons_c38106 {
+  display: var(--title-bar-icon);
+}
+
+/* Misc fixes */
+.app_a3002d {
+  color: transparent;
 }
