@@ -159,13 +159,26 @@
   outline: solid var(--button-border) 1.5px;
 }
 
-/* Toggle roșu complet, fără flash albastru */
-.container__3f21e,
-.container__3f21e.checked__3f21e,
+/* Toggle dezactivat */
+.container__3f21e {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* negru */
+    transition: none !important;                     /* elimină animația default */
+}
+
+/* Toggle activ/bifat */
+.container__3f21e.checked__3f21e {
+    background-color: rgba(219, 1, 11, 0.8) !important; /* roșu activ */
+}
+
+/* Hover pe toggle activ */
+.container__3f21e.checked__3f21e:hover {
+    background-color: rgba(180, 0, 0, 0.8) !important; /* roșu mai închis */
+}
+
+/* Resetează pseudo-elementele care ar putea aplica alte culori */
 .container__3f21e::before,
 .container__3f21e::after {
-    background-color: rgba(219, 1, 11, 0.8) !important;
-    transition: none !important;
+    background: transparent !important;
 }
 
 
