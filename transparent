@@ -4,8 +4,8 @@
   --dark-layer1: 255,255,255;
   --dark-flyout: rgba(30,30,30);
   --dark-select: 255,255,255;
-  --dark-accent: rgb(255, 0, 0);
-  --dark-accent-hovered: rgb(200, 0, 0); /*also disabled button*/
+  --dark-accent: rgb(0, 0, 0);
+  --dark-accent-hovered: rgb(0, 0, 0); /*also disabled button*/
   --dark-accent-font-color: black;
   --dark-button: rgb(45,45,45);
   --dark-button-border: rgb(60, 60, 60);
