@@ -3,16 +3,19 @@
 
 :root{
     --app-bg: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDR5cmR6ZjYyd2xtYmpwc3pwOHBkNmZjbnRldHAxYzQxZDNsbmw1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ov9jWPi1AH2XUfI6Q/giphy.gif);
-    --blur-bg: 80px;
-    --blur-other: 30px;
-    --brightness-bg: 0.5;
+    --blur-bg: 0px; /* Redus blur-ul pe fundalul principal */
+    --blur-other: 10px; /* Lăsat puțin blur pe pop-up-uri */
+    --brightness-bg: 0.1; /* Foarte întunecat */
 
-    --color-main: rgba(255,255,255,0.1);
-    --border-main:  1px solid rgba(255, 255, 255, 0.1);
-    --boxshadow: inset 0 0 10px rgba(100, 100, 100, 0.1);
+    /* Culorile de bază pentru efectele de sticlă: Negru pur */
+    --color-main: rgba(0,0,0,0.5); 
+    --border-main:  1px solid rgba(255, 255, 255, 0.05);
+    --boxshadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 
-    /* Новый красный цвет для элементов */
+    /* Culoarea de accent (butonul roșu) */
     --red-color: rgba(219, 1, 11, 0.8);
+    /* Culoarea de fundal pentru bare/câmpuri: Negru semi-transparent */
+    --semi-black-bg: rgba(0, 0, 0, 0.7); 
 }
 
 
@@ -21,43 +24,45 @@ body{
     background-position: 15% !important;
     background-size: 105% 105% !important;
 }   
-/* blur на фоне */
+/* blur pe fundalul principal - setat la 0 */
 .bg__960e4 {
     backdrop-filter: blur(var(--blur-bg)) brightness(var(--brightness-bg));
 }
 
+/* ⚠️ Setarea tuturor variabilelor de fundal la negru foarte închis ⚠️ */
 .visual-refresh .theme-darker, .visual-refresh.theme-darker{
---background-base-lowest: transparent;
---bg-base-tertiary: transparent;
---background-tertiary: transparent;
---background-secondary: transparent;
---background-primary: transparent;
---background-base-lower: transparent;
---custom-channel-members-bg: transparent;
---background-base-low: transparent;
---bg-brand: rgba(255, 255, 255, 0.2);
---background-code: rgba(255, 255, 255, 0.05);
---button-filled-brand-background: rgba(255, 255, 255, 0.1);
---button-filled-brand-background-hover: rgba(255, 255, 255, 0.2);
---background-surface-high: rgba(255, 255, 255, 0.15);
---background-secondary-alt: rgba(255, 255, 255, 0.1);
---background-modifier-hover: rgba(255, 255, 255, 0.15);
---background-mod-subtle: rgba(255, 255, 255, 0.15);
---card-primary-bg: rgba(255, 255, 255, 0.15);
---bg-base-secondary: rgba(255, 255, 255, 0.15);
---brand-500: rgba(91, 103, 234, 0.4);
+--background-base-lowest: rgba(0, 0, 0, 0.9);
+--bg-base-tertiary: rgba(0, 0, 0, 0.9);
+--background-tertiary: rgba(0, 0, 0, 0.9);
+--background-secondary: rgba(0, 0, 0, 0.9);
+--background-primary: rgba(0, 0, 0, 0.9);
+--background-base-lower: rgba(0, 0, 0, 0.9);
+--custom-channel-members-bg: rgba(0, 0, 0, 0.9);
+--background-base-low: rgba(0, 0, 0, 0.9);
+--bg-brand: rgba(0, 0, 0, 0.5); /* Culoarea elementelor de tip "brand" mai închisă */
+--background-code: rgba(0, 0, 0, 0.5);
+--button-filled-brand-background: rgba(0, 0, 0, 0.4);
+--button-filled-brand-background-hover: rgba(0, 0, 0, 0.6);
+--background-surface-high: rgba(0, 0, 0, 0.9);
+--background-secondary-alt: rgba(0, 0, 0, 0.8);
+--background-modifier-hover: rgba(0, 0, 0, 0.7);
+--background-mod-subtle: rgba(0, 0, 0, 0.7);
+--card-primary-bg: rgba(0, 0, 0, 0.9);
+--bg-base-secondary: rgba(0, 0, 0, 0.9);
+--brand-500: rgba(0, 0, 0, 0.4);
 --text-feedback-positive: rgba(255, 255, 255, 0.65);
 --green-360: rgba(255, 255, 255, 0.65);
 }
-/* Call BackGround*/
+
+/* Fundalul apelurilor - Negru */
 .visual-refresh .root_bfe55a{
-    background: transparent;
+    background: rgba(0, 0, 0, 0.9) !important;
 }
 
-/* Call BackGround*/
+/* Call Container - Negru */
 .callContainer_cb9592{
-    background: transparent;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     border: var(--border-main);
     margin-left: 10px;
@@ -68,7 +73,7 @@ body{
 /* Share Watch in Full Screen FIX*/
 .gradientContainer_bfe55a {
     background-image: linear-gradient(
-        rgba(255, 255, 255, 0.04) 0%,
+        rgba(0, 0, 0, 0.4) 0%,
         rgba(0, 0, 0, 0) 50%
     );
 }
@@ -87,9 +92,9 @@ body{
     margin: unset !important;
 }
 
-/* Context Menu*/
+/* Context Menu - Negru blurat */
 .menu_c1e9c4{
-    background: rgba(0, 0, 0, 0.158);
+    background: rgba(0, 0, 0, 0.9);
     border: var(--border-main);
 
 }
@@ -110,46 +115,46 @@ body{
      backdrop-filter: blur(var(--blur-other));
 }
 
-/* UP Profile BackGround*/
+/* UP Profile BackGround - Negru */
 .banner__68edb{
- background: rgba(255, 255, 255, 0.05) !important;
+ background: rgba(0, 0, 0, 0.9) !important;
 }
 
-/* Profile BackGround*/
+/* Profile BackGround - Negru */
 .fullSize_c0bea0,.root__24502,
 /* LKM */
 .inner_c0bea0 {
-    background: transparent !important;
+    background: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(10px);
 }
 .outer_c0bea0,
 /* LKM */
 .inner_c0bea0{
-    background: rgba(255, 255, 255, 0.05) !important;
+    background: rgba(0, 0, 0, 0.9) !important;
 }
 
 /* add status on myself dots */
 .outer_ab8609{
-    background: transparent;
+    background: rgba(0, 0, 0, 0.9);
 }
-/* ToolTip */
+/* ToolTip - Negru blurat */
 .tooltip__382e7{
-background: rgba(0, 0, 0, 0.15) !important;
+background: rgba(0, 0, 0, 0.9) !important;
 backdrop-filter: blur(var(--blur-other));
 box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 .tooltipPrimary__382e7 .tooltipPointer__382e7{
     display: none;
 }
-/* ToolTips in Chat */
+/* ToolTips in Chat - Negru blurat */
 .visual-refresh .wrapper_f7ecac{
-    background: transparent;
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(var(--blur-other));
     border: var(--border-main);
 }
-/* ToolTips in Server */
+/* ToolTips in Server - Negru blurat */
 .reactionTooltip_b49891{
-    background: rgba(255, 255, 255, 0) !important;
+    background: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(var(--blur-other));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -162,31 +167,33 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 
-/* Chat */
+/* Chat Bottom Bar - Negru */
 .channelBottomBarArea_f75fb0{
-    backdrop-filter: blur(var(--blur-other))
+    backdrop-filter: blur(var(--blur-other));
+    background: rgba(0, 0, 0, 0.9) !important;
 }
+/* Text Area - Negru */
 .channelTextArea_f75fb0{
-    background: transparent !important;
+    background: var(--semi-black-bg) !important; 
 }
-/* ??????????????????????????????????????????? */
+/* Scrollable Container - Negru */
 .scrollableContainer__74017{
-background: rgba(255, 255, 255, 0.03) !important;  
+background: rgba(0, 0, 0, 0.9) !important;  
 border: var(--border-main);
 box-shadow: var(--boxshadow);
 }
 
 
-/* Call Status, and etc */
+/* Call Status, and etc - Negru */
 .visual-refresh .panels_c48ade{
 border: var(--border-main) !important;
 backdrop-filter: blur(var(--blur-bg));
-background: rgba(255, 255, 255, 0.03) !important;  
+background: rgba(0, 0, 0, 0.9) !important;  
 box-shadow: var(--boxshadow);
 }
-/* UP Panel Call Status, and etc */
+/* UP Panel Call Status, and etc - Negru */
 .panel__5dec7{
-    background: transparent !important;
+    background: rgba(0, 0, 0, 0.9) !important;
 }
 
 
@@ -195,14 +202,15 @@ button.vc-ranb-button.button__201d5.lookFilled__201d5.sizeMin__201d5.grow__201d5
 border: none;
 }
 
-/* CheckBox */
+/* CheckBox - Negru (cu interior roșu) */
 .container__87bf1.checked__87bf1{
-    background-color: rgba(255, 255, 255, 0.24) !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
-/* Profile card */
+/* Profile card - Negru */
 .accountProfileCard__1fed1{
     border: var(--border-main);
+    background: rgba(0, 0, 0, 0.9) !important;
 }
 
 
@@ -211,20 +219,20 @@ border: none;
 .artContainer_a55fdc{
     display: none !important;
 }
-/* НИЗ/ВЕРХ */
+/* НИЗ/ВЕРХ - Negru blurat */
 .border_a55fdc,.modalFooter_a55fdc{
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: blur(20px)
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px)
 }
-/* ГРАДИЕНТ */  
+/* ГРАДИЕНТ - Negru */  
 .visual-refresh .container_a55fdc{
-     background: radial-gradient(90.42% 100% at 50% 100%, rgba(0, 0, 0, 0) 60%, transparent 100%), linear-gradient(270deg, rgba(27, 27, 29, 0.5) 0, rgba(35, 35, 39, 0.5) 100%)
+     background: radial-gradient(90.42% 100% at 50% 100%, rgba(0, 0, 0, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.8) 100%)
 }
 /* ВЫДАЧА ДЕМКИ */
 
-/* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
+/* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ - Negru blurat */
 .buttonSection__1405b{
-    background: radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(40, 39, 43, 0.5) 0, rgba(29, 29, 32, 0.5) 100%) !important;
+    background: radial-gradient(90.42% 100% at 50% 100%, rgba(0, 0, 0, 0.7) 60%, transparent 100%), linear-gradient(270deg, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.9) 100%) !important;
     backdrop-filter: blur(10px)
 }
 
@@ -237,16 +245,16 @@ border: none;
 }
 /* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
 
-/* СМЕНА РЕГИОНА */
+/* СМЕНА РЕГИОНА - Negru blurat */
 .quickSelectPopout_ebaca5{
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(10px)
 }
 /* СМЕНА РЕГИОНА */
 
-/* MESSAGEBOX */
+/* MESSAGEBOX - Negru blurat */
 .root__49fc1{
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px)
 }
 
@@ -273,12 +281,9 @@ border: none;
 }
 /* ПРОГРЕСС БАР ЗВУК  */
 
-/* БАРЫ ТЕСТА МИКРОФОНА И ГРОМКОСТИ (СДЕЛАНЫ ПРОЗРАЧНЫМИ) */
-/* Селекторы для фона ползунка чувствительности микрофона: */
-.inputMini__269d7, .inputDefault__269d7,
-/* Селектор для фона ползунка громкости: */
-.sliderOverride_a562c8 { 
-    background-color: transparent !important;
+/* ⚠️ БАРЫ ТЕСТА МИКРОФОНА И ГРОМКОСТИ (СДЕЛАНЫ ЧЕРНЫМИ) ⚠️ */
+.inputMini__269d7, .inputDefault__269d7, .sliderOverride_a562c8 { 
+    background-color: var(--semi-black-bg) !important; /* Negru semi-transparent */
     box-shadow: none !important;
     border: none !important;
 }
@@ -286,36 +291,36 @@ border: none;
 .border__2f4f7.speaking__2f4f7{
    box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.2) inset;
 }
-/* ИНФОРМАЦИЯ СПРАВА В ПРОФИЛЕ  */
+/* ИНФОРМАЦИЯ СПРАВА В ПРОФИЛЕ - Negru */
 :where(.overlay_c0bea0){
-    background: rgba(145, 145, 145, 0.1);
+    background: rgba(0, 0, 0, 0.9);
     border: var(--border-main) !important;
 }
-/* ЗАКРЕПЫ  */
+/* ЗАКРЕПЫ - Negru blurat */
 .visual-refresh .messagesPopoutWrap__45690, .visual-refresh .messageGroupWrapper__45690{
-    background: rgba(120, 120, 120, 0.1);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px)
 }
 
 .visual-refresh .file__0ccae{
-   background: rgba(0, 0, 0, 0.3); 
+   background: rgba(0, 0, 0, 0.8); 
 }
 .visual-refresh .jumpButton__45690{
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.8);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hoverButtonGroup__06ab4{
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.8);
     border: var(--border-main) !important;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .visual-refresh .header__45690{
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.8);
     border-bottom: var(--border-main) !important;
 }
 
 .wrapper_cb9592.minimum_cb9592{
-    background: transparent !important;
+    background: rgba(0, 0, 0, 0.8) !important;
 }
