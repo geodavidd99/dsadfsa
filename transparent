@@ -141,20 +141,17 @@
 
 /*Buttons*/
 .lookFilled__201d5.colorBrand__201d5 {
-  background-color: var(--accent);
-  color: var(--accent-font);
+  background-color: transparent !important;
+  color: var(--accent-font); /* textul rămâne vizibil */
+  outline: solid 1.5px var(--accent); /* opțional: păstrezi conturul cyan */
 }
 .lookFilled__201d5.colorBrand__201d5:hover {
-  background-color: var(--accent-hovered);
+  background-color: transparent !important;
+  outline-color: var(--accent-hovered); /* contur mai închis la hover */
 }
-.lookFilled__201d5.colorBrand__201d5:disabled{
-  background-color: var(--accent-hovered);
-}
-.lookFilled__201d5.colorPrimary__201d5, .lookFilled__201d5.colorPrimary__201d5:disabled {
-  background-color: var(--button);
-  color: var(--button-font-color);
-  outline: solid var(--button-border) 1.5px;
-}
+.lookFilled__201d5.colorBrand__201d5:disabled {
+  background-color: transparent !important;
+  outline-color: var(--accent-hovered);
 
 /*Toggle*/
 .container__3f21e.checked__3f21e{
