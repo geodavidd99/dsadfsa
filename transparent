@@ -159,18 +159,30 @@
   outline: solid var(--button-border) 1.5px;
 }
 
-/* Toggle-uri generale */
+/* ===============================
+   Variabile generale culori roșu
+   =============================== */
+:root {
+    --custom-red: rgba(219,1,11,0.8);        /* ON / accent principal */
+    --custom-red-hover: rgba(180,0,0,0.8);   /* Hover / mai închis */
+    --custom-black: rgba(0,0,0,0.8);         /* OFF / fundal toggle */
+    --custom-white: white;                    /* Text / checkmark */
+}
+
+/* ===============================
+   Toggle-uri generale
+   =============================== */
 .container__3f21e {
-    background-color: rgba(0, 0, 0, 0.8) !important; /* OFF = negru */
+    background-color: var(--custom-black) !important; /* OFF */
     transition: none !important;
 }
 
 .container__3f21e.checked__3f21e {
-    background-color: rgba(219, 1, 11, 0.8) !important; /* ON = roșu */
+    background-color: var(--custom-red) !important; /* ON */
 }
 
 .container__3f21e.checked__3f21e:hover {
-    background-color: rgba(180, 0, 0, 0.8) !important; /* Hover = roșu mai închis */
+    background-color: var(--custom-red-hover) !important; /* Hover */
 }
 
 .container__3f21e::before,
@@ -178,36 +190,123 @@
     background: transparent !important;
 }
 
-/* Checkbox-uri Themes (Setări) */
+/* ===============================
+   Checkbox-uri Themes / Settings
+   =============================== */
 .themeSettings .checkbox-2jXyX0 {
-    background-color: rgba(0, 0, 0, 0.8) !important; /* OFF = negru */
-    border: 1px solid rgba(180,0,0,0.8) !important;
+    background-color: var(--custom-black) !important; /* OFF */
+    border: 1px solid var(--custom-red-hover) !important;
     transition: none !important;
 }
 
 .themeSettings .checkbox-2jXyX0.checked-1fX7Ys {
-    background-color: rgba(219, 1, 11, 0.8) !important; /* ON = roșu */
+    background-color: var(--custom-red) !important; /* ON */
 }
 
 .themeSettings .checkbox-2jXyX0.checked-1fX7Ys:hover {
-    background-color: rgba(180, 0, 0, 0.8) !important; /* Hover = roșu mai închis */
+    background-color: var(--custom-red-hover) !important; /* Hover */
 }
 
-/* Checkmark pseudo-element */
 .themeSettings .checkbox-2jXyX0::after {
-    background-color: white !important; /* checkmark alb */
+    background-color: var(--custom-white) !important; /* Checkmark alb */
 }
 
-/* Optional: toate butoanele lookFilled roșii */
+/* ===============================
+   Butoane lookFilled
+   =============================== */
 .lookFilled__201d5.colorBrand__201d5,
 .lookFilled__201d5.colorBrand__201d5:hover,
 .lookFilled__201d5.colorBrand__201d5:disabled {
-    background-color: rgba(219, 1, 11, 0.8) !important; /* roșu */
-    color: white !important;
+    background-color: var(--custom-red) !important;
+    color: var(--custom-white) !important;
 }
 
 .lookFilled__201d5.colorBrand__201d5:hover {
-    background-color: rgba(180, 0, 0, 0.8) !important;
+    background-color: var(--custom-red-hover) !important;
+}
+
+/* ===============================
+   Select / Highlight / Focus
+   =============================== */
+.background-modifier-selected,
+.background-modifier-active,
+.background-modifier-hover,
+.input-focused {
+    background-color: var(--custom-red) !important;
+}
+
+.channelTextArea_f75fb0:focus {
+    outline: 1px solid var(--custom-red) !important;
+}
+
+/* ===============================
+   Hover pe elemente interactive
+   =============================== */
+.clickable_f37cb1:hover,
+.colorBrand__201d5:hover,
+.hoverHighlight {
+    background-color: var(--custom-red-hover) !important;
+}
+
+/* ===============================
+   Scrollbar / Accent
+   =============================== */
+.scrollbar-thumb {
+    background-color: var(--custom-red) !important;
+}
+
+.scrollbar-thumb:hover {
+    background-color: var(--custom-red-hover) !important;
+}
+
+/* ===============================
+   Pseudo-elemente reset / alb
+   =============================== */
+::selection {
+    background-color: var(--custom-red-hover) !important;
+    color: var(--custom-white) !important;
+}
+
+/* ===============================
+   Input / voice / studio profile
+   =============================== */
+.inputDefault-2g-os5,
+.textArea-2Spzkt,
+.inputFocused-1U1x3t {
+    border: 1px solid var(--custom-red) !important;
+    color: var(--custom-white) !important;
+}
+
+.inputDefault-2g-os5:focus,
+.textArea-2Spzkt:focus,
+.inputFocused-1U1x3t:focus {
+    border-color: var(--custom-red-hover) !important;
+    box-shadow: 0 0 5px var(--custom-red-hover) !important;
+}
+
+/* ===============================
+   Misc / Panels / Background accent
+   =============================== */
+.panels__5e434,
+.container__37e49,
+.user-profile-sidebar,
+.outer_bf1984 {
+    background-color: rgba(30,0,0,0.3) !important; /* puțin întunecat pentru contrast */
+}
+
+.statusPanel,
+.background-accent {
+    background-color: var(--custom-red) !important;
+}
+
+/* ===============================
+   Chat highlights (ping / mentions)
+   =============================== */
+.messageHighlighted-1wzRe5,
+.mention,
+.mentionMe {
+    background-color: var(--custom-red-hover) !important;
+    color: var(--custom-white) !important;
 }
 
 
