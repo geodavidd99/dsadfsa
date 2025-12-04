@@ -282,3 +282,20 @@ body{
 .app_a3002d {
   color: transparent;
 }
+
+
+
+/* Checkbox Themes și alte checkbox-uri */
+.checkbox_f525d3 {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* OFF = negru */
+}
+
+.checkbox_f525d3.checked_f525d3 {
+    background-color: rgba(219, 1, 11, 0.8) !important; /* ON = roșu */
+}
+
+/* Resetează pseudo-elementele */
+.checkbox_f525d3::before,
+.checkbox_f525d3::after {
+    background: transparent !important;
+}
