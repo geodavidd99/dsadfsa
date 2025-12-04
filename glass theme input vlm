@@ -2,7 +2,7 @@
 @import url("https://eject37.github.io/DiscordTheme/HideTrash.css");
 
 :root{
-    --app-bg: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDR5cmR6ZjYydWxtYmpwc3pwOHBkNmZjbnRldHAxYzQxZDNsbmw1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ov9jWPi1AH2XUfI6Q/giphy.gif);
+    --app-bg: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDR5cmR6ZjYyd2xtYmpwc3pwOHBkNmZjbnRldHAxYzQxZDNsbmw1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ov9jWPi1AH2XUfI6Q/giphy.gif);
     --blur-bg: 80px;
     --blur-other: 30px;
     --brightness-bg: 0.5;
@@ -10,49 +10,51 @@
     --color-main: rgba(255,255,255,0.1);
     --border-main:  1px solid rgba(255, 255, 255, 0.1);
     --boxshadow: inset 0 0 10px rgba(100, 100, 100, 0.1);
+
+    /* Новый красный цвет для элементов */
+    --red-color: rgba(219, 1, 11, 0.8);
 }
+
 
 body{
     background: var(--app-bg) !important;
     background-position: 15% !important;
     background-size: 105% 105% !important;
 }   
-
-/* Blur background */
+/* blur на фоне */
 .bg__960e4 {
     backdrop-filter: blur(var(--blur-bg)) brightness(var(--brightness-bg));
 }
 
 .visual-refresh .theme-darker, .visual-refresh.theme-darker{
-    --background-base-lowest: transparent;
-    --bg-base-tertiary: transparent;
-    --background-tertiary: transparent;
-    --background-secondary: transparent;
-    --background-primary: transparent;
-    --background-base-lower: transparent;
-    --custom-channel-members-bg: transparent;
-    --background-base-low: transparent;
-    --bg-brand: rgba(255, 255, 255, 0.2);
-    --background-code: rgba(255, 255, 255, 0.05);
-    --button-filled-brand-background: rgba(255, 255, 255, 0.1);
-    --button-filled-brand-background-hover: rgba(255, 255, 255, 0.2);
-    --background-surface-high: rgba(255, 255, 255, 0.15);
-    --background-secondary-alt: rgba(255, 255, 255, 0.1);
-    --background-modifier-hover: rgba(255, 255, 255, 0.15);
-    --background-mod-subtle: rgba(255, 255, 255, 0.15);
-    --card-primary-bg: rgba(255, 255, 255, 0.15);
-    --bg-base-secondary: rgba(255, 255, 255, 0.15);
-    --brand-500: rgba(91, 103, 234, 0.4);
-    --text-feedback-positive: rgba(255, 255, 255, 0.65);
-    --green-360: rgba(255, 255, 255, 0.65);
+--background-base-lowest: transparent;
+--bg-base-tertiary: transparent;
+--background-tertiary: transparent;
+--background-secondary: transparent;
+--background-primary: transparent;
+--background-base-lower: transparent;
+--custom-channel-members-bg: transparent;
+--background-base-low: transparent;
+--bg-brand: rgba(255, 255, 255, 0.2);
+--background-code: rgba(255, 255, 255, 0.05);
+--button-filled-brand-background: rgba(255, 255, 255, 0.1);
+--button-filled-brand-background-hover: rgba(255, 255, 255, 0.2);
+--background-surface-high: rgba(255, 255, 255, 0.15);
+--background-secondary-alt: rgba(255, 255, 255, 0.1);
+--background-modifier-hover: rgba(255, 255, 255, 0.15);
+--background-mod-subtle: rgba(255, 255, 255, 0.15);
+--card-primary-bg: rgba(255, 255, 255, 0.15);
+--bg-base-secondary: rgba(255, 255, 255, 0.15);
+--brand-500: rgba(91, 103, 234, 0.4);
+--text-feedback-positive: rgba(255, 255, 255, 0.65);
+--green-360: rgba(255, 255, 255, 0.65);
 }
-
-/* Call background */
+/* Call BackGround*/
 .visual-refresh .root_bfe55a{
     background: transparent;
 }
 
-/* Call container */
+/* Call BackGround*/
 .callContainer_cb9592{
     background: transparent;
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
@@ -63,9 +65,12 @@ body{
     margin-top: 10px;
 }
 
-/* Share Watch full screen fix */
+/* Share Watch in Full Screen FIX*/
 .gradientContainer_bfe55a {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0) 50%);
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(0, 0, 0, 0) 50%
+    );
 }
 .callContainer_cb9592:has(.actionRow__6981d) {
     margin: unset;
@@ -82,10 +87,11 @@ body{
     margin: unset !important;
 }
 
-/* Context Menu */
+/* Context Menu*/
 .menu_c1e9c4{
     background: rgba(0, 0, 0, 0.158);
     border: var(--border-main);
+
 }
 .menu_c1e9c4::before{
     backdrop-filter: blur(var(--blur-other));
@@ -101,46 +107,60 @@ body{
 }
 /* Fix picture open */
 #image-context[class*="menu_c1e9c4"]{
-    backdrop-filter: blur(var(--blur-other));
+     backdrop-filter: blur(var(--blur-other));
 }
 
-/* Profile backgrounds */
+/* UP Profile BackGround*/
 .banner__68edb{
-    background: rgba(255, 255, 255, 0.05) !important;
+ background: rgba(255, 255, 255, 0.05) !important;
 }
-.fullSize_c0bea0, .root__24502, .inner_c0bea0 {
+
+/* Profile BackGround*/
+.fullSize_c0bea0,.root__24502,
+/* LKM */
+.inner_c0bea0 {
     background: transparent !important;
     backdrop-filter: blur(10px);
 }
-.outer_c0bea0, .inner_c0bea0{
+.outer_c0bea0,
+/* LKM */
+.inner_c0bea0{
     background: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Tooltips */
+/* add status on myself dots */
+.outer_ab8609{
+    background: transparent;
+}
+/* ToolTip */
 .tooltip__382e7{
-    background: rgba(0, 0, 0, 0.15) !important;
-    backdrop-filter: blur(var(--blur-other));
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+background: rgba(0, 0, 0, 0.15) !important;
+backdrop-filter: blur(var(--blur-other));
+box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 .tooltipPrimary__382e7 .tooltipPointer__382e7{
     display: none;
 }
+/* ToolTips in Chat */
 .visual-refresh .wrapper_f7ecac{
     background: transparent;
     backdrop-filter: blur(var(--blur-other));
     border: var(--border-main);
 }
+/* ToolTips in Server */
 .reactionTooltip_b49891{
     background: rgba(255, 255, 255, 0) !important;
     backdrop-filter: blur(var(--blur-other));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Download button */
+
+/* DownloadButton */
 .hoverButtonGroup__06ab4{
-    backdrop-filter: blur(var(--blur-other));
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+backdrop-filter: blur(var(--blur-other));
+box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
+
 
 /* Chat */
 .channelBottomBarArea_f75fb0{
@@ -149,34 +169,35 @@ body{
 .channelTextArea_f75fb0{
     background: transparent !important;
 }
+/* ??????????????????????????????????????????? */
 .scrollableContainer__74017{
-    background: rgba(255, 255, 255, 0.03) !important;  
-    border: var(--border-main);
-    box-shadow: var(--boxshadow);
+background: rgba(255, 255, 255, 0.03) !important;  
+border: var(--border-main);
+box-shadow: var(--boxshadow);
 }
 
-/* Call Status */
+
+/* Call Status, and etc */
 .visual-refresh .panels_c48ade{
-    border: var(--border-main) !important;
-    backdrop-filter: blur(var(--blur-bg));
-    background: rgba(255, 255, 255, 0.03) !important;  
-    box-shadow: var(--boxshadow);
+border: var(--border-main) !important;
+backdrop-filter: blur(var(--blur-bg));
+background: rgba(255, 255, 255, 0.03) !important;  
+box-shadow: var(--boxshadow);
 }
+/* UP Panel Call Status, and etc */
 .panel__5dec7{
     background: transparent !important;
 }
 
+
 /* Read All button */
 button.vc-ranb-button.button__201d5.lookFilled__201d5.sizeMin__201d5.grow__201d5{
-    border: none;
+border: none;
 }
 
-/* Checkboxes */
-.container__87bf1{
-    border: 1px solid rgba(219, 1, 11, 0.8);
-}
+/* CheckBox */
 .container__87bf1.checked__87bf1{
-    background-color: rgba(219, 1, 11, 0.8) !important;
+    background-color: rgba(255, 255, 255, 0.24) !important;
 }
 
 /* Profile card */
@@ -184,77 +205,88 @@ button.vc-ranb-button.button__201d5.lookFilled__201d5.sizeMin__201d5.grow__201d5
     border: var(--border-main);
 }
 
-/* Art / modal */
+
+/* ВЫДАЧА ДЕМКИ */
+/* АРТ */
 .artContainer_a55fdc{
     display: none !important;
 }
+/* НИЗ/ВЕРХ */
 .border_a55fdc,.modalFooter_a55fdc{
     background-color: rgba(255, 255, 255, 0.05) !important;
     backdrop-filter: blur(20px)
 }
+/* ГРАДИЕНТ */  
 .visual-refresh .container_a55fdc{
-    background: radial-gradient(90.42% 100% at 50% 100%, rgba(0, 0, 0, 0) 60%, transparent 100%), linear-gradient(270deg, rgba(27, 27, 29, 0.5) 0, rgba(35, 35, 39, 0.5) 100%);
+     background: radial-gradient(90.42% 100% at 50% 100%, rgba(0, 0, 0, 0) 60%, transparent 100%), linear-gradient(270deg, rgba(27, 27, 29, 0.5) 0, rgba(35, 35, 39, 0.5) 100%)
 }
+/* ВЫДАЧА ДЕМКИ */
 
-/* Voice channel panel */
+/* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
 .buttonSection__1405b{
     background: radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(40, 39, 43, 0.5) 0, rgba(29, 29, 32, 0.5) 100%) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px)
 }
+
 .disconnect_f1ceac {
     background: radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(122, 71, 90, 0.5) 0, rgba(122, 71, 86, 0.5) 100%) !important;
 }
+
 .buttonSection__1405b,.disconnect_f1ceac{
     border: none;
 }
+/* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
 
-/* Quick select / region */
+/* СМЕНА РЕГИОНА */
 .quickSelectPopout_ebaca5{
     background: rgba(255, 255, 255, 0.15) !important;
     backdrop-filter: blur(10px)
 }
+/* СМЕНА РЕГИОНА */
 
-/* Messagebox */
+/* MESSAGEBOX */
 .root__49fc1{
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px)
 }
+
 .footer__49fc1{
     background: transparent;
 }
+/* MESSAGEBOX */
 
-/* Switch / checkbox active red */
-:where(.visual-refresh) .checkbox_f525d3.checked_f525d3 {
-    background: rgba(219, 1, 11, 0.8) !important;
-    border: none;
+/* НАЖАТЫЕ КНОПКИ (ЧЕКБОКСЫ) - СДЕЛАНЫ КРАСНЫМИ */
+:where(.visual-refresh) .checkbox_f525d3.checked_f525d3{
+    /* Использование нового красного цвета */
+    background: var(--red-color) !important;
+    border-color: var(--red-color) !important;
+    box-shadow: 0 0 10px 0 var(--red-color) !important; /* Добавляем небольшую тень для акцента */
 }
+/* НАЖАТЫЕ КНОПКИ (ЧЕКБОКСЫ) */
 
-/* Volume bar */
-.barFill_a562c8 {
-    background: radial-gradient(ellipse farthest-corner at right bottom, rgba(219, 1, 11, 1) 0%, rgba(219, 1, 11, 0.8) 80%, transparent 100%),
-                radial-gradient(ellipse farthest-corner at left top, rgba(219, 1, 11, 0.6) 0%, rgba(219, 1, 11, 0.4) 50%, transparent 100%);
+/* ПРОГРЕСС БАР ЗВУК - СДЕЛАН КРАСНЫМ */
+.barFill_a562c8{
+    /* Использование только нового красного цвета */
+    background: var(--red-color) !important;
     border: none;
     background-color: transparent !important;
 }
+/* ПРОГРЕСС БАР ЗВУК  */
 
-/* Speaking border */
 .border__2f4f7.speaking__2f4f7{
    box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.2) inset;
 }
-
-/* Overlay profile info */
+/* ИНФОРМАЦИЯ СПРАВА В ПРОФИЛЕ  */
 :where(.overlay_c0bea0){
     background: rgba(145, 145, 145, 0.1);
     border: var(--border-main) !important;
 }
-
-/* Messages / popouts */
+/* ЗАКРЕПЫ  */
 .visual-refresh .messagesPopoutWrap__45690, .visual-refresh .messageGroupWrapper__45690{
     background: rgba(120, 120, 120, 0.1);
     backdrop-filter: blur(10px)
 }
 
-/* Files / jump button */
 .visual-refresh .file__0ccae{
    background: rgba(0, 0, 0, 0.3); 
 }
@@ -263,26 +295,17 @@ button.vc-ranb-button.button__201d5.lookFilled__201d5.sizeMin__201d5.grow__201d5
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Buttons in setări roșii */
-.hoverButtonGroup__06ab4 {
-    background: rgba(219, 1, 11, 0.1);
-    border: 1px solid rgba(219, 1, 11, 0.8);
-    box-shadow: 0 0 10px rgba(219, 1, 11, 0.5);
-    backdrop-filter: blur(var(--blur-other));
-    transition: background 0.2s, box-shadow 0.2s;
-}
-.hoverButtonGroup__06ab4:hover {
-    background: rgba(219, 1, 11, 0.3);
-    box-shadow: 0 0 15px rgba(219, 1, 11, 0.7);
+.hoverButtonGroup__06ab4{
+    background: rgba(255, 255, 255, 0.1);
+    border: var(--border-main) !important;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Header */
 .visual-refresh .header__45690{
     background: rgba(0, 0, 0, 0.3);
     border-bottom: var(--border-main) !important;
 }
 
-/* Minimum wrapper */
 .wrapper_cb9592.minimum_cb9592{
-    background: rgba(219, 1, 11, 0.05) !important;
+    background: transparent !important;
 }
