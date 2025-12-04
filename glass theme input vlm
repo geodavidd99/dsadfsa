@@ -2,20 +2,14 @@
 @import url("https://eject37.github.io/DiscordTheme/HideTrash.css");
 
 :root{
-    --app-bg: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDR5cmR6ZjYyd2xtYmpwc3pwOHBkNmZjbnRldHAxYzQxZDNsbmw1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ov9jWPi1AH2XUfI6Q/giphy.gif);
-    --blur-bg: 0px; /* Fără blur pe fundalul aplicației */
-    --blur-other: 0px; /* Fără blur pe pop-up-uri */
-    --brightness-bg: 0.05; /* Foarte, foarte întunecat */
+    --app-bg: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDR5cmR6ZjYydWxtYmpwc3pwOHBkNmZjbnRldHAxYzQxZDNsbmw1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ov9jWPi1AH2XUfI6Q/giphy.gif);
+    --blur-bg: 80px;
+    --blur-other: 30px;
+    --brightness-bg: 0.5;
 
-    /* Culorile de bază */
-    --color-main: #000000; 
-    --border-main:  1px solid rgba(255, 255, 255, 0.02); /* Ramă foarte subtilă, aproape neagră */
-    --boxshadow: inset 0 0 5px rgba(0, 0, 0, 1);
-
-    /* Culoarea de accent (butonul roșu) */
-    --red-color: rgba(219, 1, 11, 0.8);
-    /* Culoarea de fundal pentru bare/câmpuri: Negru solid */
-    --semi-black-bg: #000000; 
+    --color-main: rgba(255,255,255,0.1);
+    --border-main:  1px solid rgba(255, 255, 255, 0.1);
+    --boxshadow: inset 0 0 10px rgba(100, 100, 100, 0.1);
 }
 
 
@@ -24,45 +18,43 @@ body{
     background-position: 15% !important;
     background-size: 105% 105% !important;
 }   
-/* blur pe fundalul principal - 0px */
+/* blur на фоне */
 .bg__960e4 {
     backdrop-filter: blur(var(--blur-bg)) brightness(var(--brightness-bg));
 }
 
-/* ⚠️ Setarea tuturor variabilelor de fundal la Negru Pur (#000000) ⚠️ */
 .visual-refresh .theme-darker, .visual-refresh.theme-darker{
---background-base-lowest: #000000 !important;
---bg-base-tertiary: #000000 !important;
---background-tertiary: #000000 !important;
---background-secondary: #000000 !important;
---background-primary: #000000 !important;
---background-base-lower: #000000 !important;
---custom-channel-members-bg: #000000 !important;
---background-base-low: #000000 !important;
---bg-brand: #111111 !important; /* Elementele de tip "brand" închise */
---background-code: #111111 !important;
---button-filled-brand-background: #111111 !important;
---button-filled-brand-background-hover: #222222 !important;
---background-surface-high: #000000 !important;
---background-secondary-alt: #000000 !important;
---background-modifier-hover: #111111 !important;
---background-mod-subtle: #111111 !important;
---card-primary-bg: #000000 !important;
---bg-base-secondary: #000000 !important;
---brand-500: #111111 !important;
---text-feedback-positive: rgba(255, 255, 255, 0.9);
---green-360: rgba(255, 255, 255, 0.9);
+--background-base-lowest: transparent;
+--bg-base-tertiary: transparent;
+--background-tertiary: transparent;
+--background-secondary: transparent;
+--background-primary: transparent;
+--background-base-lower: transparent;
+--custom-channel-members-bg: transparent;
+--background-base-low: transparent;
+--bg-brand: rgba(255, 255, 255, 0.2);
+--background-code: rgba(255, 255, 255, 0.05);
+--button-filled-brand-background: rgba(255, 255, 255, 0.1);
+--button-filled-brand-background-hover: rgba(255, 255, 255, 0.2);
+--background-surface-high: rgba(255, 255, 255, 0.15);
+--background-secondary-alt: rgba(255, 255, 255, 0.1);
+--background-modifier-hover: rgba(255, 255, 255, 0.15);
+--background-mod-subtle: rgba(255, 255, 255, 0.15);
+--card-primary-bg: rgba(255, 255, 255, 0.15);
+--bg-base-secondary: rgba(255, 255, 255, 0.15);
+--brand-500: rgba(91, 103, 234, 0.4);
+--text-feedback-positive: rgba(255, 255, 255, 0.65);
+--green-360: rgba(255, 255, 255, 0.65);
 }
-
-/* Fundalul apelurilor - Negru Pur */
+/* Call BackGround*/
 .visual-refresh .root_bfe55a{
-    background: #000000 !important;
+    background: transparent;
 }
 
-/* Call Container - Negru Pur */
+/* Call BackGround*/
 .callContainer_cb9592{
-    background: #000000 !important;
-    box-shadow: var(--boxshadow);
+    background: transparent;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     border: var(--border-main);
     margin-left: 10px;
@@ -73,7 +65,7 @@ body{
 /* Share Watch in Full Screen FIX*/
 .gradientContainer_bfe55a {
     background-image: linear-gradient(
-        #000000 0%,
+        rgba(255, 255, 255, 0.04) 0%,
         rgba(0, 0, 0, 0) 50%
     );
 }
@@ -92,14 +84,14 @@ body{
     margin: unset !important;
 }
 
-/* Context Menu - Negru Solid, fără blur */
+/* Context Menu*/
 .menu_c1e9c4{
-    background: #000000;
+    background: rgba(0, 0, 0, 0.158);
     border: var(--border-main);
 
 }
 .menu_c1e9c4::before{
-    backdrop-filter: blur(var(--blur-other)); /* 0px */
+    backdrop-filter: blur(var(--blur-other));
     content: "";
     width: 100%;
     height: 100%;
@@ -112,89 +104,86 @@ body{
 }
 /* Fix picture open */
 #image-context[class*="menu_c1e9c4"]{
-     backdrop-filter: blur(var(--blur-other)); /* 0px */
+     backdrop-filter: blur(var(--blur-other));
 }
 
-/* UP Profile BackGround - Negru Pur */
+/* UP Profile BackGround*/
 .banner__68edb{
- background: #000000 !important;
+ background: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Profile BackGround - Negru Pur */
+/* Profile BackGround*/
 .fullSize_c0bea0,.root__24502,
 /* LKM */
 .inner_c0bea0 {
-    background: #000000 !important;
-    backdrop-filter: blur(0px);
+    background: transparent !important;
+    backdrop-filter: blur(10px);
 }
 .outer_c0bea0,
 /* LKM */
 .inner_c0bea0{
-    background: #000000 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* add status on myself dots */
 .outer_ab8609{
-    background: #000000;
+    background: transparent;
 }
-/* ToolTip - Negru Solid, fără blur */
+/* ToolTip */
 .tooltip__382e7{
-background: #000000 !important;
+background: rgba(0, 0, 0, 0.15) !important;
 backdrop-filter: blur(var(--blur-other));
-box-shadow: 0 0 10px #000000;
+box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 .tooltipPrimary__382e7 .tooltipPointer__382e7{
     display: none;
 }
-/* ToolTips in Chat - Negru Solid, fără blur */
+/* ToolTips in Chat */
 .visual-refresh .wrapper_f7ecac{
-    background: #000000;
+    background: transparent;
     backdrop-filter: blur(var(--blur-other));
     border: var(--border-main);
 }
-/* ToolTips in Server - Negru Solid, fără blur */
+/* ToolTips in Server */
 .reactionTooltip_b49891{
-    background: #000000 !important;
+    background: rgba(255, 255, 255, 0) !important;
     backdrop-filter: blur(var(--blur-other));
-    box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
-/* DownloadButton - Negru */
+/* DownloadButton */
 .hoverButtonGroup__06ab4{
 backdrop-filter: blur(var(--blur-other));
-box-shadow: 0 0 10px #000000;
-background: #000000;
+box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 
-/* Chat Bottom Bar - Negru */
+/* Chat */
 .channelBottomBarArea_f75fb0{
-    backdrop-filter: blur(var(--blur-other));
-    background: #000000 !important;
+    backdrop-filter: blur(var(--blur-other))
 }
-/* Text Area - Negru Solid */
 .channelTextArea_f75fb0{
-    background: var(--semi-black-bg) !important; 
+    background: transparent !important;
 }
-/* Scrollable Container - Negru */
+/* ??????????????????????????????????????????? */
 .scrollableContainer__74017{
-background: #000000 !important;  
+background: rgba(255, 255, 255, 0.03) !important;  
 border: var(--border-main);
 box-shadow: var(--boxshadow);
 }
 
 
-/* Call Status, and etc - Negru */
+/* Call Status, and etc */
 .visual-refresh .panels_c48ade{
 border: var(--border-main) !important;
 backdrop-filter: blur(var(--blur-bg));
-background: #000000 !important;  
+background: rgba(255, 255, 255, 0.03) !important;  
 box-shadow: var(--boxshadow);
 }
-/* UP Panel Call Status, and etc - Negru */
+/* UP Panel Call Status, and etc */
 .panel__5dec7{
-    background: #000000 !important;
+    background: transparent !important;
 }
 
 
@@ -203,15 +192,15 @@ button.vc-ranb-button.button__201d5.lookFilled__201d5.sizeMin__201d5.grow__201d5
 border: none;
 }
 
-/* CheckBox - Negru (cu interior roșu) */
+
+/* CheckBox */
 .container__87bf1.checked__87bf1{
-    background-color: #000000 !important;
+    background-color: rgba(255, 255, 255, 0.24) !important;
 }
 
-/* Profile card - Negru */
+/* Profile card */
 .accountProfileCard__1fed1{
     border: var(--border-main);
-    background: #000000 !important;
 }
 
 
@@ -220,21 +209,21 @@ border: none;
 .artContainer_a55fdc{
     display: none !important;
 }
-/* НИЗ/ВЕРХ - Negru Solid */
+/* НИЗ/ВЕРХ */
 .border_a55fdc,.modalFooter_a55fdc{
-    background-color: #000000 !important;
-    backdrop-filter: blur(0px)
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(20px)
 }
-/* ГРАДИЕНТ - Negru */  
+/* ГРАДИЕНТ */  
 .visual-refresh .container_a55fdc{
-     background: #000000 !important;
+     background: radial-gradient(90.42% 100% at 50% 100%, rgba(0, 0, 0, 0) 60%, transparent 100%), linear-gradient(270deg, rgba(27, 27, 29, 0.5) 0, rgba(35, 35, 39, 0.5) 100%)
 }
 /* ВЫДАЧА ДЕМКИ */
 
-/* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ - Negru Solid */
+/* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
 .buttonSection__1405b{
-    background: #000000 !important;
-    backdrop-filter: blur(0px)
+    background: radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(40, 39, 43, 0.5) 0, rgba(29, 29, 32, 0.5) 100%) !important;
+    backdrop-filter: blur(10px)
 }
 
 .disconnect_f1ceac {
@@ -246,17 +235,17 @@ border: none;
 }
 /* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
 
-/* СМЕНА РЕГИОНА - Negru Solid */
+/* СМЕНА РЕГИОНА */
 .quickSelectPopout_ebaca5{
-    background: #000000 !important;
-    backdrop-filter: blur(0px)
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px)
 }
 /* СМЕНА РЕГИОНА */
 
-/* MESSAGEBOX - Negru Solid */
+/* MESSAGEBOX */
 .root__49fc1{
-    background: #000000;
-    backdrop-filter: blur(0px)
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px)
 }
 
 .footer__49fc1{
@@ -264,64 +253,57 @@ border: none;
 }
 /* MESSAGEBOX */
 
-/* НАЖАТЫЕ КНОПКИ (ЧЕКБОКСЫ) - СДЕЛАНЫ КРАСНЫМИ */
+/* НАЖАТЫЕ КНОПКИ */
 :where(.visual-refresh) .checkbox_f525d3.checked_f525d3{
-    /* Использование нового красного цвета */
-    background: var(--red-color) !important;
-    border-color: var(--red-color) !important;
-    box-shadow: 0 0 10px 0 var(--red-color) !important; 
+    background: radial-gradient(90.42% 100% at 50% 100%, rgba(226, 135, 135, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(31, 17, 119, 0.5) 0, rgba(130, 110, 238, 0.5) 100%) !important;
+    border: none;
 }
-/* НАЖАТЫЕ КНОПКИ (ЧЕКБОКСЫ) */
+/* НАЖАТЫЕ КНОПКИ */
 
-/* ПРОГРЕСС БАР ЗВУК - СДЕЛАН КРАСНЫМ */
+/* ПРОГРЕСС БАР ЗВУК  */
 .barFill_a562c8{
-    /* Использование только нового красного цвета */
-    background: var(--red-color) !important;
+    background: 
+        radial-gradient(ellipse farthest-corner at right bottom, rgba(219, 1, 11, 0.8) 0%, rgba(180, 0, 0, 0.8) 50%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, rgba(255, 100, 100, 0.5) 0%, rgba(219, 1, 11, 0.8) 50%, transparent 100%);
     border: none;
     background-color: transparent !important;
 }
-/* ПРОГРЕСС БАР ЗВУК  */
 
-/* ⚠️ БАРЫ ТЕСТА МИКРОФОНА И ГРОМКОСТИ (СДЕЛАНЫ ЧЕРНЫМИ) ⚠️ */
-.inputMini__269d7, .inputDefault__269d7, .sliderOverride_a562c8 { 
-    background-color: var(--semi-black-bg) !important; /* Negru Solid */
-    box-shadow: none !important;
-    border: none !important;
-}
+/* ПРОГРЕСС БАР ЗВУК  */
 
 .border__2f4f7.speaking__2f4f7{
    box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.2) inset;
 }
-/* ИНФОРМАЦИЯ СПРАВА В ПРОФИЛЕ - Negru */
+/* ИНФОРМАЦИЯ СПРАВА В ПРОФИЛЕ  */
 :where(.overlay_c0bea0){
-    background: #000000;
+    background: rgba(145, 145, 145, 0.1);
     border: var(--border-main) !important;
 }
-/* ЗАКРЕПЫ - Negru Solid */
+/* ЗАКРЕПЫ  */
 .visual-refresh .messagesPopoutWrap__45690, .visual-refresh .messageGroupWrapper__45690{
-    background: #000000;
-    backdrop-filter: blur(0px)
+    background: rgba(120, 120, 120, 0.1);
+    backdrop-filter: blur(10px)
 }
 
 .visual-refresh .file__0ccae{
-   background: #000000; 
+   background: rgba(0, 0, 0, 0.3); 
 }
 .visual-refresh .jumpButton__45690{
-    background: #000000;
-    box-shadow: 0px 0px 10px 5px #000000;
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hoverButtonGroup__06ab4{
-    background: #000000;
+    background: rgba(255, 255, 255, 0.1);
     border: var(--border-main) !important;
-    box-shadow: 0px 0px 10px 5px #000000;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .visual-refresh .header__45690{
-    background: #000000;
+    background: rgba(0, 0, 0, 0.3);
     border-bottom: var(--border-main) !important;
 }
 
 .wrapper_cb9592.minimum_cb9592{
-    background: #000000 !important;
+    background: transparent !important;
 }
