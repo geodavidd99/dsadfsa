@@ -14,7 +14,7 @@
     --brightness-bg: 0.5;
 
     --color-main: rgba(255,255,255,0.1);
-    --border-main:  1px solid rgba(255, 255, 255, 0.1);
+    --border-main: 1px solid rgba(255, 255, 255, 0.1);
     --boxshadow: inset 0 0 10px rgba(100, 100, 100, 0.1);
 }
 
@@ -25,44 +25,18 @@ body{
     background: var(--app-bg) !important;
     background-position: 15% !important;
     background-size: 105% 105% !important;
-}   
+}
 
-/* Blur for main backgrounds */
+/* Blur backgrounds */
 .bg__960e4 {
     backdrop-filter: blur(var(--blur-bg)) brightness(var(--brightness-bg));
 }
 
 /* ===========================
-   DARK THEME BASE TRANSPARENT
-   =========================== */
-.visual-refresh .theme-darker,
-.visual-refresh.theme-darker{
-    --background-base-lowest: transparent;
-    --bg-base-tertiary: transparent;
-    --background-tertiary: transparent;
-    --background-secondary: transparent;
-    --background-primary: transparent;
-    --background-base-lower: transparent;
-    --custom-channel-members-bg: transparent;
-    --background-base-low: transparent;
-    --bg-brand: rgba(255, 255, 255, 0.2);
-    --background-code: rgba(255, 255, 255, 0.05);
-    --button-filled-brand-background: rgba(255, 255, 255, 0.1);
-    --button-filled-brand-background-hover: rgba(255, 255, 255, 0.2);
-    --background-surface-high: rgba(255, 255, 255, 0.15);
-    --background-secondary-alt: rgba(255, 255, 255, 0.1);
-    --background-modifier-hover: rgba(255, 255, 255, 0.15);
-    --background-mod-subtle: rgba(255, 255, 255, 0.15);
-    --card-primary-bg: rgba(255, 255, 255, 0.15);
-    --bg-base-secondary: rgba(255, 255, 255, 0.15);
-    --brand-500: rgba(91, 103, 234, 0.4);
-    --text-feedback-positive: rgba(255, 255, 255, 0.65);
-    --green-360: rgba(255, 255, 255, 0.65);
-}
-
-/* ===========================
    TRANSPARENT ELEMENTS
    =========================== */
+.visual-refresh .theme-darker,
+.visual-refresh.theme-darker,
 .visual-refresh .root_bfe55a,
 .callContainer_cb9592,
 .fullSize_c0bea0,
@@ -71,57 +45,68 @@ body{
 .tooltip__382e7,
 .visual-refresh .wrapper_f7ecac,
 .reactionTooltip_b49891,
-.hoverButtonGroup__06ab4,
-.channelTextArea_f75fb0,
 .scrollableContainer__74017,
 .panel__5dec7,
 .footer__49fc1,
 .accountProfileCard__1fed1,
 .visual-refresh .messagesPopoutWrap__45690,
-.visual-refresh .messageGroupWrapper__45690 {
+.visual-refresh .messageGroupWrapper__45690,
+.channelTextArea_f75fb0 {
     background: transparent !important;
     backdrop-filter: blur(var(--blur-other)) !important;
 }
 
 /* ===========================
-   BUTTONS TRANSPARENT
+   BUTOANE ȘI CHECKBOX URI TRANSPARENTE
    =========================== */
 button,
 .lookFilled__201d5,
 .vc-ranb-button.button__201d5,
 .hoverButtonGroup__06ab4,
-.container__3f21e.checked__3f21e,
-.checkbox_f525d3 {
-    background: transparent !important;
-    color: white !important;
-    border: none !important;
-    box-shadow: none !important;
-    border-radius: 5px;
-    transition: background 0.2s ease;
+.container__3f21e,
+.checkbox_f525d3,
+.container__87bf1.checked__87bf1,
+.checkbox_f525d3.checked_f525d3 {
+    background: transparent !important;  /* Fundal complet invizibil */
+    color: white !important;             /* Text vizibil */
+    border: none !important;             /* Fără margine */
+    box-shadow: none !important;         /* Fără shadow */
+    border-radius: 0px !important;       /* Fără colțuri rotunjite */
+    transition: none !important;         /* Fără tranziție */
 }
 
-/* Hover / active */
+/* Hover / focus / active */
 button:hover,
 .lookFilled__201d5:hover,
 .vc-ranb-button.button__201d5:hover,
 .hoverButtonGroup__06ab4:hover,
 .container__3f21e.checked__3f21e:hover,
-.checkbox_f525d3:hover {
-    background: rgba(255, 255, 255, 0.05) !important;
+.checkbox_f525d3:hover,
+.checkbox_f525d3.checked_f525d3:hover {
+    background: transparent !important;
     cursor: pointer;
 }
 
-/* Disabled buttons */
+/* Disabled */
 button:disabled,
 .lookFilled__201d5:disabled,
-.vc-ranb-button.button__201d5:disabled {
+.vc-ranb-button.button__201d5:disabled,
+.checkbox_f525d3:disabled {
     background: transparent !important;
     color: rgba(255, 255, 255, 0.5) !important;
-    cursor: default;
+    cursor: default !important;
+}
+
+/* Checkbox selectat / checked */
+.checkbox_f525d3.checked_f525d3,
+.container__87bf1.checked__87bf1 {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 /* ===========================
-   SPECIFIC FIXES
+   TOOLTIP, MENU, POPUPS FIX
    =========================== */
 .menu_c1e9c4 {
     background: rgba(0,0,0,0.158);
