@@ -159,14 +159,26 @@
   outline: solid var(--button-border) 1.5px;
 }
 
-/*Toggle roșu când activ*/
-.container__3f21e.checked__3f21e{
-  background-color: rgba(219, 1, 11, 0.8) !important; /* roșu activ */
+/* Toggle roșu complet, fără flash albastru */
+.container__3f21e,
+.container__3f21e.checked__3f21e {
+    transition: none !important;           
+    background-color: transparent !important;
 }
 
-.container__3f21e.checked__3f21e:hover{
-  background-color: rgba(180, 0, 0, 0.8) !important; /* roșu hover */
+.container__3f21e.checked__3f21e {
+    background-color: rgba(219, 1, 11, 0.8) !important; 
 }
+
+.container__3f21e.checked__3f21e:hover {
+    background-color: rgba(180, 0, 0, 0.8) !important; 
+}
+
+.container__3f21e::before,
+.container__3f21e::after {
+    background: transparent !important;
+}
+
 
 
 /*Special Flyout*/
