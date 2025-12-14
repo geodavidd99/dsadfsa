@@ -148,9 +148,12 @@
 .lookFilled__201d5.colorBrand__201d5:hover {
   background-color: var(--accent-hovered); /* ACCENT NEGRU ÎNCHIS la hover */
 }
+/* CORECȚIE BUG: Ajustăm stilul butoanelor dezactivate */
 .lookFilled__201d5.colorBrand__201d5:disabled{
-  background-color: var(--accent-hovered);
+  background-color: rgba(0, 0, 0, 0.4); 
+  pointer-events: none; /* Asigură comportamentul standard de dezactivare */
 }
+
 .lookFilled__201d5.colorPrimary__201d5, .lookFilled__201d5.colorPrimary__201d5:disabled {
   background-color: var(--button); /* BUTON NEGRU */
   color: var(--button-font-color);
@@ -260,7 +263,7 @@ body{
   color: transparent;
 }
 
-/* --- CSS NOU ADĂUGAT PENTRU A VIZA BUTOANELE CAMERA/SHARE SCREEN/ACTIVITĂȚI --- */
+/* --- CSS BUTOANE BLACK GLASS (Camera/Share Screen/Activities) --- */
 
 /* Vizează butoanele din panoul de jos care folosesc culoarea de accent (Camera, Share Screen, Activities) */
 .theme-dark .button_e131a9.buttonFilled__42b0a, /* Butoane din panoul de voce (ex: disconect) */
@@ -277,7 +280,6 @@ body{
 .theme-dark .button_af5d99.selected__59556 {
     background-color: var(--accent-hovered) !important;
 }
-
 
 /* --- CSS PENTRU EFECTUL DE STICLĂ NEAGRĂ (BLACK GLASSMORHPISM) --- */
 
@@ -302,4 +304,15 @@ body{
 /* Asigură-te că flyout-urile/elementele flotante mențin culoarea lor foarte închisă */
 .popout__3f413, .menu_c1e9c4, .messagesPopoutWrap_e8b59c {
   background-color: var(--flyout) !important; 
+}
+
+/* --- FIX SUPLIMENTAR PENTRU EVENTE DE MOUSE (Change Quality Bug) --- */
+/* Forțează butoanele sau layerele care pot bloca click-ul să permită evenimentele de mouse. */
+/* Vizăm elemente care de obicei găzduiesc butoane de partajare/calitate */
+.theme-dark :is(
+    .popout_c1e9c4, /* Context menu container */
+    .menu_c1e9c4,
+    .contentWrapper__08434 /* Stream settings wrapper */
+) {
+    pointer-events: auto !important;
 }
