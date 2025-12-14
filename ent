@@ -1,20 +1,20 @@
 :root {
-  /*Dark mode - Black Glass */
+  /*Dark mode - Black Glass Accent: NEGRU */
   --dark-bg: transparent;
   --dark-layer1: 255,255,255;
-  --dark-flyout: rgba(15,15,15, 0.9); /* Flyout foarte închis, aproape opac */
+  --dark-flyout: rgba(15,15,15, 0.9); 
   --dark-select: 255,255,255;
-  --dark-accent: rgb(76, 194, 255); /* Albastru neutru (original) */
-  --dark-accent-hovered: rgb(65, 163, 214); 
-  --dark-accent-font-color: black;
-  --dark-button: rgba(45,45,45, 0.8);
-  --dark-button-border: rgb(60, 60, 60);
+  --dark-accent: rgba(30, 30, 30, 0.9); /* ACCENT NEGRU GLASS */
+  --dark-accent-hovered: rgba(0, 0, 0, 0.9); /* ACCENT NEGRU ÎNCHIS */
+  --dark-accent-font-color: white; /* Font Alb pe fundal Negru */
+  --dark-button: rgba(20, 20, 20, 0.8); /* Buton Negru Glass */
+  --dark-button-border: rgba(150, 150, 150, 0.2); /* Chenar subtil */
   --dark-button-font-color: white;
   --dark-dm-about: rgba(0,0,0,0.7); 
   --dark-background-accent: rgba(50,50,50,0.8);
-  --dark-status-panel: rgba(30,30,30,0.8); /* Panou mai închis și mai opac */
+  --dark-status-panel: rgba(30,30,30,0.8); 
 
-  /*Light mode - Nemodificat, păstrează stilul original */
+  /*Light mode - Nemodificat */
   --light-bg: transparent;
   --light-layer1: 255,255,255;
   --light-flyout: rgb(255, 255, 255);
@@ -37,8 +37,8 @@
 .theme-dark { 
   --app-bg: var(--dark-bg);
   
-  /*Layer 1 - Transparență extrem de mică pentru "Black Glass" */
-  --background-primary: rgba(0,0,0,0.2); /* Black Glass base */
+  /*Layer 1 - Transparență mare, bază neagră pentru Black Glass */
+  --background-primary: rgba(0,0,0,0.2); 
   --background-base-low: rgba(0,0,0,0.2); 
   --background-secondary-alt: rgba(0,0,0,0.2);
   --input-background: rgba(0,0,0,0.2);
@@ -71,7 +71,7 @@
 .theme-light{
   --app-bg: var(--light-bg); 
 
-  /* Layer 1 - Nemodificat */
+  /* Layer 1 */
   --background-primary: rgba(var(--light-layer1),0.7); 
   --background-base-low: rgba(var(--light-layer1),0.7); 
   --background-surface-higher: rgba(var(--light-layer1), 0.4);
@@ -142,24 +142,24 @@
 
 /*Buttons*/
 .lookFilled__201d5.colorBrand__201d5 {
-  background-color: var(--accent);
+  background-color: var(--accent); /* ACCENT NEGRU */
   color: var(--accent-font);
 }
 .lookFilled__201d5.colorBrand__201d5:hover {
-  background-color: var(--accent-hovered);
+  background-color: var(--accent-hovered); /* ACCENT NEGRU ÎNCHIS la hover */
 }
 .lookFilled__201d5.colorBrand__201d5:disabled{
   background-color: var(--accent-hovered);
 }
 .lookFilled__201d5.colorPrimary__201d5, .lookFilled__201d5.colorPrimary__201d5:disabled {
-  background-color: var(--button);
+  background-color: var(--button); /* BUTON NEGRU */
   color: var(--button-font-color);
   outline: solid var(--button-border) 1.5px;
 }
 
 /*Toggle*/
 .container__3f21e.checked__3f21e{
-  background-color: var(--accent) !important;
+  background-color: var(--accent) !important; /* TOGGLE NEGRU */
 }
 .container__3f21e.checked__3f21e:hover{
   background-color: var(--accent-hovered) !important;
@@ -273,9 +273,9 @@ body{
   .popout__3f413, .menu_c1e9c4 
 ) {
   /* Filtru de încețoșare */
-  backdrop-filter: blur(8px) brightness(0.9); /* O tentă puțin mai închisă */
+  backdrop-filter: blur(8px) brightness(0.9); 
   -webkit-backdrop-filter: blur(8px) brightness(0.9);
-  /* Chenar subtil (aproape invizibil, doar pentru definire) */
+  /* Chenar subtil */
   border: 1px solid rgba(255, 255, 255, 0.05); 
   border-radius: 8px; 
 }
