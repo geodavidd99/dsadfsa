@@ -2,7 +2,7 @@
   /*Dark mode - Black Glass Accent: NEGRU */
   --dark-bg: transparent;
   --dark-layer1: 255,255,255;
-  --dark-flyout: rgba(15,15,15, 0.9); 
+  --dark-flyout: rgba(15,15,15, 0.9); /* Flyout foarte închis */
   --dark-select: 255,255,255;
   --dark-accent: rgba(30, 30, 30, 0.9); /* ACCENT NEGRU GLASS */
   --dark-accent-hovered: rgba(0, 0, 0, 0.9); /* ACCENT NEGRU ÎNCHIS */
@@ -259,6 +259,25 @@ body{
 .app_a3002d {
   color: transparent;
 }
+
+/* --- CSS NOU ADĂUGAT PENTRU A VIZA BUTOANELE CAMERA/SHARE SCREEN/ACTIVITĂȚI --- */
+
+/* Vizează butoanele din panoul de jos care folosesc culoarea de accent (Camera, Share Screen, Activities) */
+.theme-dark .button_e131a9.buttonFilled__42b0a, /* Butoane din panoul de voce (ex: disconect) */
+.theme-dark .button_e131a9.buttonFilled__42b0a:hover,
+.theme-dark .button_af5d99, /* Alt container de butoane (ex: Activities) */
+.theme-dark .button_af5d99:hover,
+.theme-dark .button__9d7dc.colorBrand_b219e5, /* Buton specific de activitate/accent */
+.theme-dark .button__9d7dc.colorBrand_b219e5:hover {
+    background-color: var(--accent) !important;
+    color: var(--accent-font) !important;
+}
+
+/* Butoanele care sunt active/alese și folosesc accentul (butoane toggle) */
+.theme-dark .button_af5d99.selected__59556 {
+    background-color: var(--accent-hovered) !important;
+}
+
 
 /* --- CSS PENTRU EFECTUL DE STICLĂ NEAGRĂ (BLACK GLASSMORHPISM) --- */
 
