@@ -1,26 +1,26 @@
 :root {
-  /*Dark mode - Black Glass Accent: NEGRU */
+  /*Dark mode*/
   --dark-bg: transparent;
   --dark-layer1: 255,255,255;
-  --dark-flyout: rgba(15,15,15, 0.9); /* Flyout foarte închis */
+  --dark-flyout: rgba(30,30,30);
   --dark-select: 255,255,255;
-  --dark-accent: rgba(30, 30, 30, 0.9); /* ACCENT NEGRU GLASS */
-  --dark-accent-hovered: rgba(0, 0, 0, 0.9); /* ACCENT NEGRU ÎNCHIS */
-  --dark-accent-font-color: white; /* Font Alb pe fundal Negru */
-  --dark-button: rgba(20, 20, 20, 0.8); /* Buton Negru Glass */
-  --dark-button-border: rgba(150, 150, 150, 0.2); /* Chenar subtil */
+  --dark-accent: rgb(20, 20, 20);
+  --dark-accent-hovered: rgb(35, 35, 35);
+  --dark-accent-font-color: white;
+  --dark-button: rgb(45,45,45);
+  --dark-button-border: rgb(60, 60, 60);
   --dark-button-font-color: white;
-  --dark-dm-about: rgba(0,0,0,0.7); 
-  --dark-background-accent: rgba(50,50,50,0.8);
-  --dark-status-panel: rgba(30,30,30,0.8); 
+  --dark-dm-about: rgba(0,0,0,0.4);
+  --dark-background-accent: rgba(50,50,50,0.9);
+  --dark-status-panel: rgba(30,30,30,0.4);
 
-  /*Light mode - Nemodificat */
+  /*Light mode*/
   --light-bg: transparent;
   --light-layer1: 255,255,255;
   --light-flyout: rgb(255, 255, 255);
   --light-select: 0,0,0;
   --light-accent: rgb(0, 120, 212);
-  --light-accent-hovered: rgb(0, 94, 167); 
+  --light-accent-hovered: rgb(0, 94, 167); /*also disabled button*/
   --light-accent-font-color: white;
   --light-button: rgb(251,251,251);
   --light-button-border: rgb(204, 204, 231);
@@ -37,15 +37,15 @@
 .theme-dark { 
   --app-bg: var(--dark-bg);
   
-  /*Layer 1 - Transparență mare, bază neagră pentru Black Glass */
-  --background-primary: rgba(0,0,0,0.2); 
-  --background-base-low: rgba(0,0,0,0.2); 
-  --background-secondary-alt: rgba(0,0,0,0.2);
-  --input-background: rgba(0,0,0,0.2);
-  --background-secondary: rgba(0,0,0,0.2);
-  --background-tertiary: rgba(0,0,0,0.25);
-  --channeltextarea-background: rgba(0,0,0,0.2);
-  --bg-mod-subtle: rgba(255,255,255,0.1);
+  /*Layer 1*/
+  --background-primary: rgba(var(--dark-layer1),0.05); /* Activity Card Empty */
+  --background-base-low: rgba(var(--dark-layer1),0.05); /* Follow channel */
+  --background-secondary-alt: rgba(var(--dark-layer1),0.05);
+  --input-background: rgba(var(--dark-layer1),0.05);
+  --background-secondary: rgba(var(--dark-layer1),0.05);
+  --background-tertiary: rgba(var(--dark-layer1),0.06);
+  --channeltextarea-background: rgba(var(--dark-layer1),0.05);
+  --bg-mod-subtle: rgba(var(--dark-layer1),0.1);
 
   /*Flyout*/
   --background-floating: var(--dark-flyout); 
@@ -72,8 +72,8 @@
   --app-bg: var(--light-bg); 
 
   /* Layer 1 */
-  --background-primary: rgba(var(--light-layer1),0.7); 
-  --background-base-low: rgba(var(--light-layer1),0.7); 
+  --background-primary: rgba(var(--light-layer1),0.7); /* Activity Card Empty */
+  --background-base-low: rgba(var(--light-layer1),0.7); /* Follow channel */
   --background-surface-higher: rgba(var(--light-layer1), 0.4);
   --background-secondary-alt: rgba(var(--light-layer1), 0.1);
   --input-background: rgba(var(--light-layer1), 0.7); 
@@ -142,30 +142,28 @@
 
 /*Buttons*/
 .lookFilled__201d5.colorBrand__201d5 {
-  background-color: var(--accent); /* ACCENT NEGRU */
-  color: var(--accent-font);
+  background-color: rgb(20, 20, 20);
+  color: white;
 }
 .lookFilled__201d5.colorBrand__201d5:hover {
-  background-color: var(--accent-hovered); /* ACCENT NEGRU ÎNCHIS la hover */
+  background-color: rgb(35, 35, 35);
 }
-/* CORECȚIE BUG: Ajustăm stilul butoanelor dezactivate */
 .lookFilled__201d5.colorBrand__201d5:disabled{
-  background-color: rgba(0, 0, 0, 0.4); 
-  pointer-events: none; /* Asigură comportamentul standard de dezactivare */
+  background-color: rgb(35, 35, 35);
 }
-
-.lookFilled__201d5.colorPrimary__201d5, .lookFilled__201d5.colorPrimary__201d5:disabled {
-  background-color: var(--button); /* BUTON NEGRU */
+.lookFilled__201d5.colorPrimary__201d5,
+.lookFilled__201d5.colorPrimary__201d5:disabled {
+  background-color: var(--button);
   color: var(--button-font-color);
   outline: solid var(--button-border) 1.5px;
 }
 
 /*Toggle*/
 .container__3f21e.checked__3f21e{
-  background-color: var(--accent) !important; /* TOGGLE NEGRU */
+  background-color: rgb(20, 20, 20) !important;
 }
 .container__3f21e.checked__3f21e:hover{
-  background-color: var(--accent-hovered) !important;
+  background-color: rgb(35, 35, 35) !important;
 }
 
 /*Special Flyout*/
@@ -261,58 +259,4 @@ body{
 /* Fix semicolon bug */
 .app_a3002d {
   color: transparent;
-}
-
-/* --- CSS BUTOANE BLACK GLASS (Camera/Share Screen/Activities) --- */
-
-/* Vizează butoanele din panoul de jos care folosesc culoarea de accent (Camera, Share Screen, Activities) */
-.theme-dark .button_e131a9.buttonFilled__42b0a, /* Butoane din panoul de voce (ex: disconect) */
-.theme-dark .button_e131a9.buttonFilled__42b0a:hover,
-.theme-dark .button_af5d99, /* Alt container de butoane (ex: Activities) */
-.theme-dark .button_af5d99:hover,
-.theme-dark .button__9d7dc.colorBrand_b219e5, /* Buton specific de activitate/accent */
-.theme-dark .button__9d7dc.colorBrand_b219e5:hover {
-    background-color: var(--accent) !important;
-    color: var(--accent-font) !important;
-}
-
-/* Butoanele care sunt active/alese și folosesc accentul (butoane toggle) */
-.theme-dark .button_af5d99.selected__59556 {
-    background-color: var(--accent-hovered) !important;
-}
-
-/* --- CSS PENTRU EFECTUL DE STICLĂ NEAGRĂ (BLACK GLASSMORHPISM) --- */
-
-/* Aplică backdrop-filter pe elementele principale pentru a obține efectul de sticlă încețoșată */
-.theme-dark :is(
-  .chat__596e1, 
-  .scroller__99e7c, .privateChannels_e6b769, 
-  .wrapper_ef3116, .sidebar__5e434, 
-  .visual-refresh .channelTextArea_f75fb0, 
-  .messagesPopoutWrap_e8b59c, 
-  .quickswitcher_ac6cb0, 
-  .popout__3f413, .menu_c1e9c4 
-) {
-  /* Filtru de încețoșare */
-  backdrop-filter: blur(8px) brightness(0.9); 
-  -webkit-backdrop-filter: blur(8px) brightness(0.9);
-  /* Chenar subtil */
-  border: 1px solid rgba(255, 255, 255, 0.05); 
-  border-radius: 8px; 
-}
-
-/* Asigură-te că flyout-urile/elementele flotante mențin culoarea lor foarte închisă */
-.popout__3f413, .menu_c1e9c4, .messagesPopoutWrap_e8b59c {
-  background-color: var(--flyout) !important; 
-}
-
-/* --- FIX SUPLIMENTAR PENTRU EVENTE DE MOUSE (Change Quality Bug) --- */
-/* Forțează butoanele sau layerele care pot bloca click-ul să permită evenimentele de mouse. */
-/* Vizăm elemente care de obicei găzduiesc butoane de partajare/calitate */
-.theme-dark :is(
-    .popout_c1e9c4, /* Context menu container */
-    .menu_c1e9c4,
-    .contentWrapper__08434 /* Stream settings wrapper */
-) {
-    pointer-events: auto !important;
 }
