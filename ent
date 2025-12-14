@@ -1,33 +1,33 @@
 :root {
-  /*Dark mode*/
+  /*Dark mode - ACCENT SCHIMBAT ÎN CYAN */
   --dark-bg: transparent;
   --dark-layer1: 255,255,255;
-  --dark-flyout: rgba(30,30,30);
+  --dark-flyout: rgba(30,30,30, 0.85); /* Sticlă transparentă */
   --dark-select: 255,255,255;
-  --dark-accent: rgb(76, 194, 255);
-  --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
+  --dark-accent: rgb(0, 255, 255); /* CYAN */
+  --dark-accent-hovered: rgb(0, 204, 204); /* Cyan mai închis */
   --dark-accent-font-color: black;
-  --dark-button: rgb(45,45,45);
-  --dark-button-border: rgb(60, 60, 60);
+  --dark-button: rgba(45,45,45, 0.8);
+  --dark-button-border: rgb(0, 255, 255); /* Chenar Cyan pe buton */
   --dark-button-font-color: white;
-  --dark-dm-about: rgba(0,0,0,0.4);
-  --dark-background-accent: rgba(50,50,50,0.9);
-  --dark-status-panel: rgba(30,30,30,0.4);
+  --dark-dm-about: rgba(0,0,0,0.6);
+  --dark-background-accent: rgba(50,50,50,0.7);
+  --dark-status-panel: rgba(30,30,30,0.7);
 
-  /*Light mode*/
+  /*Light mode - ACCENT SCHIMBAT ÎN CYAN */
   --light-bg: transparent;
-  --light-layer1: 255,255,255;
-  --light-flyout: rgb(255, 255, 255);
+  --light-layer1: 0,0,0; 
+  --light-flyout: rgba(255, 255, 255, 0.85); /* Sticlă transparentă */
   --light-select: 0,0,0;
-  --light-accent: rgb(0, 120, 212);
-  --light-accent-hovered: rgb(0, 94, 167); /*also disabled button*/
+  --light-accent: rgb(0, 191, 255); /* CYAN MAI DESCHIS */
+  --light-accent-hovered: rgb(0, 153, 204); 
   --light-accent-font-color: white;
-  --light-button: rgb(251,251,251);
-  --light-button-border: rgb(204, 204, 231);
+  --light-button: rgba(251,251,251, 0.8);
+  --light-button-border: rgb(0, 191, 255); /* Chenar Cyan pe buton */
   --light-button-font-color: black;
-  --light-dm-about: rgba(255,255,255,0.35);
-  --light-background-accent: rgba(160,160,160,0.9);
-  --light-status-panel: rgba(255,255,255,0.4);
+  --light-dm-about: rgba(255,255,255,0.6);
+  --light-background-accent: rgba(160,160,160,0.7);
+  --light-status-panel: rgba(255,255,255,0.7);
   
   /* Titlebar */
   --custom-app-top-bar-height: calc(24px + var(--space-sm)); 
@@ -37,15 +37,15 @@
 .theme-dark { 
   --app-bg: var(--dark-bg);
   
-  /*Layer 1*/
-  --background-primary: rgba(var(--dark-layer1),0.05); /* Activity Card Empty */
-  --background-base-low: rgba(var(--dark-layer1),0.05); /* Follow channel */
-  --background-secondary-alt: rgba(var(--dark-layer1),0.05);
-  --input-background: rgba(var(--dark-layer1),0.05);
-  --background-secondary: rgba(var(--dark-layer1),0.05);
-  --background-tertiary: rgba(var(--dark-layer1),0.06);
-  --channeltextarea-background: rgba(var(--dark-layer1),0.05);
-  --bg-mod-subtle: rgba(var(--dark-layer1),0.1);
+  /*Layer 1 - Transparență mai mare pentru efectul de sticlă */
+  --background-primary: rgba(var(--dark-layer1),0.03); 
+  --background-base-low: rgba(var(--dark-layer1),0.03); 
+  --background-secondary-alt: rgba(var(--dark-layer1),0.03);
+  --input-background: rgba(var(--dark-layer1),0.03);
+  --background-secondary: rgba(var(--dark-layer1),0.03);
+  --background-tertiary: rgba(var(--dark-layer1),0.04);
+  --channeltextarea-background: rgba(var(--dark-layer1),0.03);
+  --bg-mod-subtle: rgba(var(--dark-layer1),0.08);
 
   /*Flyout*/
   --background-floating: var(--dark-flyout); 
@@ -53,9 +53,9 @@
   /*Select or hover*/
   --layer1: var(--dark-layer1);
   --flyout: var(--dark-flyout);
-  --background-modifier-selected: rgba(var(--dark-select),0.07);
-  --background-modifier-active: rgba(var(--dark-select),0.07);
-  --background-modifier-hover: rgba(var(--dark-select),0.05);
+  --background-modifier-selected: rgba(var(--dark-select),0.10);
+  --background-modifier-active: rgba(var(--dark-select),0.10);
+  --background-modifier-hover: rgba(var(--dark-select),0.07);
 
   /*variables*/
   --accent: var(--dark-accent);
@@ -71,15 +71,15 @@
 .theme-light{
   --app-bg: var(--light-bg); 
 
-  /* Layer 1 */
-  --background-primary: rgba(var(--light-layer1),0.7); /* Activity Card Empty */
-  --background-base-low: rgba(var(--light-layer1),0.7); /* Follow channel */
-  --background-surface-higher: rgba(var(--light-layer1), 0.4);
-  --background-secondary-alt: rgba(var(--light-layer1), 0.1);
-  --input-background: rgba(var(--light-layer1), 0.7); 
-  --background-secondary: rgba(var(--light-layer1), 0.7);
-  --background-tertiary: rgba(var(--light-layer1), 0.7);
-  --channeltextarea-background: rgba(var(--light-layer1), 0.4);
+  /* Layer 1 - Transparență mai mare pentru efectul de sticlă */
+  --background-primary: rgba(var(--light-layer1),0.1); 
+  --background-base-low: rgba(var(--light-layer1),0.1); 
+  --background-surface-higher: rgba(var(--light-layer1), 0.2);
+  --background-secondary-alt: rgba(var(--light-layer1), 0.05);
+  --input-background: rgba(var(--light-layer1), 0.1); 
+  --background-secondary: rgba(var(--light-layer1), 0.1);
+  --background-tertiary: rgba(var(--light-layer1), 0.1);
+  --channeltextarea-background: rgba(var(--light-layer1), 0.1);
   --bg-mod-subtle: rgba(0,0,0,0.1);
 
   /* Flyout */
@@ -88,9 +88,9 @@
   /* Select or hover */
   --layer1: var(--light-layer1);
   --flyout: var(--light-flyout);
-  --background-modifier-selected: rgba(var(--light-select), 0.07);
-  --background-modifier-active: rgba(var(--light-select), 0.07);
-  --background-modifier-hover: rgba(var(--light-select), 0.05);
+  --background-modifier-selected: rgba(var(--light-select), 0.10);
+  --background-modifier-active: rgba(var(--light-select), 0.10);
+  --background-modifier-hover: rgba(var(--light-select), 0.07);
 
   /* Variables */
   --accent: var(--light-accent);
@@ -258,4 +258,29 @@ body{
 /* Fix semicolon bug */
 .app_a3002d {
   color: transparent;
+}
+
+/* --- CSS NOU PENTRU EFECTUL DE STICLĂ (GLASSMORHPISM) --- */
+
+/* Aplică backdrop-filter pe elementele principale pentru a obține efectul de sticlă încețoșată */
+.theme-dark :is(
+  .chat__596e1, /* Fereastra principală de chat */
+  .scroller__99e7c, .privateChannels_e6b769, /* Bara laterală DM-uri */
+  .wrapper_ef3116, .sidebar__5e434, /* Bara laterală Server */
+  .visual-refresh .channelTextArea_f75fb0, /* Zona de text */
+  .messagesPopoutWrap_e8b59c, /* Popouts */
+  .quickswitcher_ac6cb0, /* Quickswitcher */
+  .popout__3f413, .menu_c1e9c4 /* Meniuri/Meniuri contextuale */
+) {
+  /* Cheia efectului de sticlă. Puteți ajusta blur-ul (de exemplu, 8px) după preferință. */
+  backdrop-filter: blur(6px) brightness(1.1);
+  -webkit-backdrop-filter: blur(6px) brightness(1.1);
+  /* Optional: Adaugă un chenar subtil pentru definirea panoului de sticlă */
+  border: 1px solid rgba(0, 255, 255, 0.2); /* Chenar Cyan subtil */
+  border-radius: 8px; /* Colțuri rotunjite */
+}
+
+/* Asigură-te că flyout-urile/elementele flotante mențin transparența */
+.popout__3f413, .menu_c1e9c4, .messagesPopoutWrap_e8b59c {
+  background-color: var(--flyout) !important; 
 }
