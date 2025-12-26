@@ -44,7 +44,7 @@ body{
 --bg-base-secondary: rgba(255, 255, 255, 0.15);
 --brand-500: rgba(91, 103, 234, 0.4);
 --text-feedback-positive: rgba(255, 255, 255, 0.65);
---green-360: rgba(255, 255, 255, 0.65);
+--green-360: rgba(80, 200, 120, 0.8);
 }
 /* Call BackGround*/
 .visual-refresh .bfe55a0aaaf62375-root{
