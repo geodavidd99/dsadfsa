@@ -32,7 +32,7 @@ body{
 --background-base-lower: transparent;
 --custom-channel-members-bg: transparent;
 --background-base-low: transparent;
---bg-brand: rgba(255, 255, 255, 0.2);
+--bg-brand: rgba(80, 200, 120, 0.8);
 --background-code: rgba(255, 255, 255, 0.05);
 --button-filled-brand-background: rgba(255, 255, 255, 0.1);
 --button-filled-brand-background-hover: rgba(255, 255, 255, 0.2);
