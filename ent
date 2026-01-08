@@ -2,32 +2,32 @@
   /*Dark mode*/
   --dark-bg: transparent;
   --dark-layer1: 255,255,255;
-  --dark-flyout: rgba(30,30,30,0.95);
+  --dark-flyout: rgba(30,30,30);
   --dark-select: 255,255,255;
-  --dark-accent: rgb(20,20,20);
-  --dark-accent-hovered: rgb(35,35,35); /*also disabled button*/
-  --dark-accent-font-color: white;
+  --dark-accent: rgb(255, 255, 255, 0.1);
+  --dark-accent-hovered: rgb(255, 255, 255, 0.2); /*also disabled button*/
+  --dark-accent-font-color: black;
   --dark-button: rgb(45,45,45);
   --dark-button-border: rgb(60, 60, 60);
   --dark-button-font-color: white;
   --dark-dm-about: rgba(0,0,0,0.4);
   --dark-background-accent: rgba(50,50,50,0.9);
-  --dark-status-panel: rgba(30,30,30,0.45);
+  --dark-status-panel: rgba(30,30,30,0.4);
 
   /*Light mode*/
   --light-bg: transparent;
   --light-layer1: 255,255,255;
-  --light-flyout: rgba(255,255,255,0.95);
+  --light-flyout: rgb(255, 255, 255);
   --light-select: 0,0,0;
-  --light-accent: rgb(0, 120, 212);
-  --light-accent-hovered: rgb(0, 94, 167); /*also disabled button*/
+  --light-accent: rgb(0, 0, 0, 0.1);
+  --light-accent-hovered: rgb(0, 0, 0, 0.2); /*also disabled button*/
   --light-accent-font-color: white;
   --light-button: rgb(251,251,251);
   --light-button-border: rgb(204, 204, 231);
   --light-button-font-color: black;
   --light-dm-about: rgba(255,255,255,0.35);
   --light-background-accent: rgba(160,160,160,0.9);
-  --light-status-panel: rgba(255,255,255,0.45);
+  --light-status-panel: rgba(255,255,255,0.4);
   
   /* Titlebar */
   --custom-app-top-bar-height: calc(24px + var(--space-sm)); 
@@ -219,14 +219,12 @@
 .c38106a3f0c3ca76-title, .c38106a3f0c3ca76-leading, .c38106a3f0c3ca76-trailing, .c38106a3f0c3ca76-winButtons { /* Titlebar */
   display: var(--title-bar-icon);
 }
-._5e434347c823b592-sidebarListRounded { /* Remove sidebar backdrop-filter */
+._5e434347c823b592-sidebarListRounded { /* Remove sidebar backdrop-filter    WHO PUTS BACKDROP FILTER HERE?? */
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
 ._5e434347c823b592-panels, ._37e49614b9f110a9-container { /*User Profile*/ 
   background: var(--status-panel) !important;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
 }
 .visual-refresh ._740174f3d6a2c8fe-stackedBars { /* Reply Bar */
   background: transparent;
